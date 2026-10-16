@@ -1,0 +1,189 @@
+packet_id: P01
+case_id: meridian_competitor
+Question: Under Meridian's flavor technology license, what consent is required for a control acquisition, and what additional termination right applies to acquisition by a competing flavor business?
+Reviewer notes: A qualifying control change is a deemed assignment requiring discretionary express consent. The competitor clause supplies a separate immediate written-notice termination right.
+Candidate answer: Under the Meridian flavor formulation license (meridian-license-agreement.docx), a Change of Control of Licensee (acquisition of more than 50% of equity or voting power, or sale of all or substantially all assets) is deemed an assignment requiring Licensor's prior written consent under Section 8.1. Consent is in Licensor's sole and absolute discretion and may be conditioned on a royalty increase, financial assurances, scope/Territory changes, or other amendments. Separately, if Licensee is acquired by, merges with, or comes under common control with an entity that directly competes with Licensor in flavor systems, ingredients, or formulations, Licensor may terminate immediately on written notice under Section 8.3, with no cure period under Section 11.3. Whether the competitor termination right applies depends on whether the acquirer is a competing flavor business, which the retrieved evidence does not establish for Ridgeline.
+
+---
+
+packet_id: P02
+case_id: terranode_competitor
+Question: Does TerraNode have termination rights if Aldersgate is acquired by a competitor?
+Reviewer notes: Competitor status requires the revenue definition and affiliate analysis. Acquisition alone is not an unconditional termination right: check consent breach, written notice and opportunity to cure. Section 9.3 is an alternative source of the cure rule, not a mandatory duplicate of 5.5.
+Candidate answer: Conditionally yes, but the right is not triggered by the acquisition itself. Under the TerraNode ISA, a termination right arises only if Aldersgate (as Customer) assigns or purports to assign the agreement in violation of Article 9, or if a change of control is effected without the required consent. Section 9.1 treats a change of control (including a merger or acquisition) as an assignment requiring TerraNode's prior written consent, not to be unreasonably withheld, and an unconsented assignment is null and void. If the violation occurs, TerraNode may give 30 days' written notice under Section 5.5/9.3, but termination is suspended if consent is obtained within 60 days after the termination notice, and otherwise becomes effective automatically at the end of that cure period. Section 9.2 allows TerraNode to withhold consent on a reasonable basis if the acquirer or any affiliate or portfolio company is a Direct Competitor in cloud infrastructure (more than 15% of annual gross revenue from cloud infrastructure services). Whether the buyer is a 'competitor' in the sense the question asks depends on the Direct Competitor definition and facts not in the record. The Aldersgate-NovaBridge and Meridian clauses in the retrieved evidence do not give TerraNode any right. The Great Lakes definition concerns a different agreement.
+
+---
+
+packet_id: P03
+case_id: novabridge_silence_pricing
+Question: Under NovaBridge's supply agreement, can silence after advance change-of-control notice remove the termination right, and what pricing changes apply if the buyer's acquirer exceeds $1 billion in revenue?
+Reviewer notes: At least 30-day prior notice and no timely written objection cause this termination right to lapse. Qualifying buyer acquisition resets pricing to the lower of current prices and Published Wholesale Schedule; minimum purchase commitment persists.
+Candidate answer: Conditionally yes. Under §12.2, the other party's termination right on a Change of Control lapses for that Change of Control only if the party undergoing it gave at least 30 days' prior written notice with the required detail and the other party delivered no written objection within the 30-day period. Silence alone does not remove the right; advance notice must come first. Where the Change of Control is of Buyer (Solara) and the acquirer (or its ultimate parent, if the acquirer is a subsidiary) has annual revenue above $1,000,000,000, §12.3 resets pricing for all Products at closing to the lower of current contract pricing and NovaBridge's Published Wholesale Schedule. This applies for the rest of the Term, including Renewal Terms. The Minimum Purchase Commitment is unaffected. The §12.3 pricing reset is separate from the §12.2 termination mechanism, so the lapse of the termination right does not by itself turn off the pricing reset on the face of the text.
+
+---
+
+packet_id: P04
+case_id: terranode_notice_affiliate
+Question: For TerraNode's infrastructure agreement, what consent and advance notice are needed for a change of control versus an assignment to an affiliate, and does silence mean consent?
+Reviewer notes: General control transactions: 45-day notice and 30-day response, silence is not consent. Affiliate assignment has a conditional exception including 15-day notice, written assumption and continuing liability.
+Candidate answer: Change of control requires the other party's prior written consent (not to be unreasonably withheld, conditioned or delayed) and at least 45 days' prior written notice before anticipated closing. Provider may reasonably withhold consent if the acquirer or its Affiliates is a Direct Competitor in cloud infrastructure services. An assignment to an Affiliate needs no consent but requires at least 15 days' prior written notice, written assumption by the assignee, and continued joint and several liability of the assignor. Silence is not consent: failure to respond within 30 days of a complete notice is expressly not deemed consent. Whether the 45-day notice also applies to Affiliate assignments is unclear on the text. Also, the agreement is called an ISA in the file; the evidence does not confirm that it is the 'infrastructure agreement' the question refers to, though it concerns cloud infrastructure services.
+
+---
+
+packet_id: P05
+case_id: terranode_notice_affiliate
+Question: For TerraNode's infrastructure agreement, what consent and advance notice are needed for a change of control versus an assignment to an affiliate, and does silence mean consent?
+Reviewer notes: General control transactions: 45-day notice and 30-day response, silence is not consent. Affiliate assignment has a conditional exception including 15-day notice, written assumption and continuing liability.
+Candidate answer: Under the TerraNode Infrastructure Services Agreement (effective March 1, 2023), a change of control is treated as an assignment under §9.1. It needs the other party's prior written consent, which may not be unreasonably withheld, conditioned, or delayed, and written notice at least 45 days before the anticipated closing under §9.4. Provider may withhold consent on a reasonable basis if the acquirer or its affiliates are a Direct Competitor (§9.2). An assignment to an Affiliate needs no consent under §9.5, but requires at least 15 days' prior written notice, a written assumption by the assignee, and continued joint and several liability by the assignor. Because §9.4 covers any transaction that 'would constitute an assignment under this Article 9', the 45-day notice may also apply to an affiliate assignment, so the conservative course is 45 days. Silence is not consent: §9.4 states that failure to respond within 30 days 'shall not be deemed to constitute consent'. The rights above apply only if the facts fit the stated conditions; the transaction's structure, the acquirer's identity, and the notice history are not in the question.
+
+---
+
+packet_id: P06
+case_id: continental_make_whole
+Question: What repayment and make-whole premium does the First Continental agreement require when a change of control occurs, and when is the premium inapplicable?
+Reviewer notes: Repay loans, interest, fees and applicable premium at control change (next Business Day if needed). Premium is 2%; inspect expiration and scheduled-amortization exceptions and the date-of-control proviso.
+Candidate answer: On a Change of Control, all Obligations become immediately due and payable and Commitments terminate automatically (2.05(a), 7.09(b)). The Borrower must prepay all Loans in full on the Change of Control date (or the next Business Day if that date is not a Business Day), with accrued interest, fees and other amounts owing, plus any applicable Make-Whole Amount. The Make-Whole Amount is a flat 2.0% of the principal prepaid under 2.05(c). It applies only if the Change of Control occurs before the Prepayment Premium Expiration Date (November 1, 2025); this holds even if acceleration or payment happens after that date. It does not apply to a prepayment on or after November 1, 2025, or to regularly scheduled amortization payments under Section 2.03. Whether a given transaction is a Change of Control cannot be confirmed because the definition is truncated.
+
+---
+
+packet_id: P07
+case_id: compare_competitor_remedies
+Question: Compare TerraNode's infrastructure agreement and Meridian's flavor technology license: does acquisition by a competitor permit immediate termination in both, or does either require consent-breach notice and a cure opportunity?
+Reviewer notes: Compare contractual remedy procedures, assuming the relevant contractual competitor criteria are met. TerraNode remedy follows unauthorized assignment with notice and cure; Meridian has a separate immediate written-notice competitor right. This is a multi-document test.
+Candidate answer: Neither agreement is a clean immediate-termination case on the facts given. Meridian: Licensor may terminate immediately on written notice, with no cure period, only if the acquirer (or the Licensee's new common-control group) is an entity that directly competes with Licensor in flavor systems, flavor ingredients, or flavor formulations (E7, E12). If the acquirer is not such a competitor, the deal is an assignment needing Licensor's prior express written consent (E8, E10), and a non-consented closing would be a breach handled under the 30-day notice-and-cure regime of E19. TerraNode: no immediate termination right. A change of control is treated as an assignment requiring consent (E4). A violation permits termination only after 30 days' written notice, and the termination is suspended if consent is obtained within 60 days of that notice (E1, E20). Consent may be withheld on a reasonable basis if the acquirer, including any parent, Affiliate or common-control entity, is a Direct Competitor (more than 15% of annual gross revenue from cloud infrastructure services) (E2, E21). Whether either right actually arises depends on the unidentified acquirer's business profile and on the structure of the deal.
+
+---
+
+packet_id: P08
+case_id: terraverde_recapture
+Question: Does TerraVerde's lease treat a transfer of more than 50% of the tenant as an assignment, and what consent and landlord recapture rights apply?
+Reviewer notes: Section 22 treats control transfers as assignments. Landlord may elect recapture within 30 days of notice with termination 180 days after exercise; otherwise inspect consent conditions. Parser stores subclauses together under sections 21 and 22.
+Candidate answer: Yes. Under §22(a), a transfer of a controlling interest in Tenant (more than 50% of ownership interests, in one transaction or a series of related transactions, direct or indirect) is deemed an assignment for all purposes of §21 and §22. On a Change of Control, Landlord may recapture the Premises under §22(b) by written notice within 30 days after receiving Tenant's §22(d) notice, and the lease then terminates 180 days after the exercise. If Landlord does not recapture within that window, its consent may not be unreasonably withheld, conditioned or delayed, but it may be conditioned on a 12-month Base Rent security deposit, a Parent Guaranty and proof of financial capability (§22(c)). These rights depend on a transfer actually meeting the §22(a) threshold and on Tenant giving the §22(d) notice at least 30 days before the effective date. Failure to give timely notice is an Event of Default under §15.1. Whether the §21.3 conditions and the Affiliate exception reach a §22 deemed assignment is not settled by the retrieved text.
+
+---
+
+packet_id: P09
+case_id: continental_make_whole
+Question: What repayment and make-whole premium does the First Continental agreement require when a change of control occurs, and when is the premium inapplicable?
+Reviewer notes: Repay loans, interest, fees and applicable premium at control change (next Business Day if needed). Premium is 2%; inspect expiration and scheduled-amortization exceptions and the date-of-control proviso.
+Candidate answer: If a Change of Control occurs under the §1.01 definition (limb (a) above 35% beneficial ownership, limb (b) a merger leaving pre-deal holders with 65% or less, or limb (c) a sale of all or substantially all assets to a non-wholly-owned Person), the Borrower must prepay all outstanding Loans in full on that date (or the next Business Day) under §2.05(a), plus any Make-Whole Amount then applicable. The Make-Whole Amount is 2.0% of the principal amount of Loans prepaid, payable on the prepayment date and secured. It applies to a Change of Control prepayment only if the prepayment occurs before November 1, 2025, or if the Change of Control date itself is before November 1, 2025 (the §2.05(c) proviso). It does not apply to any prepayment on or after November 1, 2025 (exclusion (i)) or to regularly scheduled amortization under §2.03 (exclusion (ii)). The first-sentence and proviso tests can conflict where the Change of Control is before November 1, 2025 but the prepayment is on or after it; the retrieved text does not resolve that conflict. No Required Lender or lender-consent carve-out for the premium was found, and waiver of §7.09 needs all Lenders.
+
+---
+
+packet_id: P10
+case_id: continental_acceleration
+Question: Under the First Continental credit agreement, does a change of control automatically accelerate the debt, or must the agent declare a default and allow a cure period?
+Reviewer notes: Distinguish the automatic change-of-control remedy from the ordinary declaration mechanism. This question assumes a defined Change of Control has occurred.
+Candidate answer: Under the retrieved First Continental credit agreement text, a Change of Control is an immediate and automatic Event of Default under Section 7.09(a), with no notice, passage of time, or cure period. Under Section 7.09(b) and Section 8.01, acceleration of all Obligations and termination of Commitments is automatic and requires no declaration, election, or direction by the Agent or Lenders. Section 2.05(a) requires mandatory prepayment on the Change of Control date, and Section 2.05(c) adds a 2.0% Make-Whole Amount if that date is before November 1, 2025. These consequences apply only if a Change of Control actually occurs. Under the Section 1.01 limb (a) test (more than 35% beneficial ownership), a 100% stock purchase by Ridgeline would qualify, but the closing has not occurred and the purchase agreement is not yet signed. The Section 1.01 definition of Event of Default contains a notice-satisfaction proviso that conflicts on its face with Section 7.09(a). The specific provision is read to control, but the retrieved text contains no express reconciliation.
+
+---
+
+packet_id: P11
+case_id: pinnacle_licensee
+Question: What happens to Pinnacle's exclusive technology license and fees after a change of control of the licensee, and can either party terminate?
+Reviewer notes: Conversion is automatic absent prior written consent to retain exclusivity. Payment duties persist; the licensee control change itself confers no termination right.
+Candidate answer: On the stated facts (a 100% equity acquisition of Aldersgate by an acquirer, which is a Change of Control of Licensee under §1.8), Pinnacle's exclusive license converts automatically to non-exclusive at consummation under §14.1, unless Pinnacle gives prior written consent in its sole and absolute discretion. Silence for 30 days after a consent request is a deemed refusal (§14.4). The Annual License Fee of $3.4M ($850K per quarter) continues unchanged for the rest of the Term (§14.2(b), §14.5). The change of control by itself gives neither party a termination right (§14.5). A termination right could arise only through a breach route: a failure to give the §14.3 notice at least 45 days before closing is stated to be a material breach, and §12.3 allows termination on 60 days' written notice if the breach is not cured. Whether §14.5 bars that route is not resolved on the retrieved text and should be confirmed with counsel.
+
+---
+
+packet_id: P12
+case_id: terraverde_recapture
+Question: Does TerraVerde's lease treat a transfer of more than 50% of the tenant as an assignment, and what consent and landlord recapture rights apply?
+Reviewer notes: Section 22 treats control transfers as assignments. Landlord may elect recapture within 30 days of notice with termination 180 days after exercise; otherwise inspect consent conditions. Parser stores subclauses together under sections 21 and 22.
+Candidate answer: Yes, on the retrieved text: under Section 22(a), a transfer of more than 50% of Tenant's ownership interests (single or related series, direct or indirect, any structure) is a deemed assignment for purposes of Sections 21 and 22, called a Change of Control. If it occurs, Landlord holds a Recapture Right under 22(b), exercisable by written notice within 30 days after receiving the Section 22(d) notice, terminating the Lease 180 days after exercise. If Landlord does not recapture, its consent to the deemed assignment may not be unreasonably withheld, conditioned or delayed, but Landlord may condition consent on an increased Security Deposit equal to 12 months' Base Rent, a Parent Guaranty, and financial capability showing under 22(c). Tenant must give at least 30 days' prior written notice with the required information under 22(d); failure is an Event of Default under Section 15.1. The Section 21.2 affiliate exception does not appear to apply to a third-party acquisition of control, but that is an inference from the text, not an express carve-out for Section 22.
+
+---
+
+packet_id: P13
+case_id: pinnacle_licensee
+Question: What happens to Pinnacle's exclusive technology license and fees after a change of control of the licensee, and can either party terminate?
+Reviewer notes: Conversion is automatic absent prior written consent to retain exclusivity. Payment duties persist; the licensee control change itself confers no termination right.
+Candidate answer: On a Change of Control of the licensee, the exclusive license automatically converts to non-exclusive on the closing date, unless Pinnacle gave prior written consent to keep exclusivity (sole and absolute discretion). The Annual License Fee, as adjusted under §4.3, stays unchanged and the full fee remains payable for the rest of the Term. Neither party gets a termination right from the Change of Control itself. Pinnacle's only lever is consent to maintain exclusivity. This depends on the event qualifying as a Change of Control under §1.8, which was not retrieved. The licensee's failure to give timely 45-day notice is a separate material breach, which may carry its own consequences outside this evidence.
+
+---
+
+packet_id: P14
+case_id: apex_msa_successor
+Question: Does the permitted assignment to a merger successor in Apex's master services agreement eliminate the customer's change-of-control termination right? State the exercise and notice periods.
+Reviewer notes: The assignment exception is subject to 12.3: customer may give 60-day notice within 120 days of receiving provider's written control-change notice. Provider must notify within ten business days after consummation.
+Candidate answer: No. The permitted assignment to a merger successor in Section 16.1 does not eliminate the customer's change-of-control termination right. Section 16.1 states that it is subject to, and does not limit or modify, Customer's rights under Section 12.3. The right arises only if the merger or asset sale is a Change of Control of Provider (more than 50% change in voting equity, or sale of all or substantially all assets). Provider must give written notice within 10 business days after consummation. Customer may exercise within 120 days after receiving that notice by giving 60 days' prior written notice of termination. If Customer does not give notice within the 120 days, it waives the right for that event only.
+
+---
+
+packet_id: P15
+case_id: continental_acceleration
+Question: Under the First Continental credit agreement, does a change of control automatically accelerate the debt, or must the agent declare a default and allow a cure period?
+Reviewer notes: Distinguish the automatic change-of-control remedy from the ordinary declaration mechanism. This question assumes a defined Change of Control has occurred.
+Candidate answer: Yes, if a Change of Control as defined in Section 1.01 actually occurs. Acceleration is then automatic: Section 7.09(a) makes it an immediate Event of Default with no notice, passage of time or cure period. Section 7.09(b) makes all Obligations immediately due and Commitments terminate automatically. Section 8.01 confirms that no Agent declaration or Required Lender direction is needed. No cure period applies. This depends on whether the transaction falls within the Change of Control definition, which the question does not establish.
+
+---
+
+packet_id: P16
+case_id: apex_msa_successor
+Question: Does the permitted assignment to a merger successor in Apex's master services agreement eliminate the customer's change-of-control termination right? State the exercise and notice periods.
+Reviewer notes: The assignment exception is subject to 12.3: customer may give 60-day notice within 120 days of receiving provider's written control-change notice. Provider must notify within ten business days after consummation.
+Candidate answer: No, the permitted-assignment carve-out in Section 16.1 does not eliminate Customer's change-of-control termination right. Section 16.1 expressly states it is subject to and shall not limit or modify Customer's rights under Section 12.3. Under Section 12.3(a), if a Change of Control of Provider occurs, Customer may terminate on 60 days' prior written notice to Provider, exercisable within 120 days after Customer receives Provider's written notice of the Change of Control. Provider must give that notice no later than 10 business days after consummation. If Customer does not deliver termination notice within the 120-day window, the right is waived for that event only. The right is conditional on a Change of Control of Provider as defined in Article 1 (more than 50% of voting equity changed, or sale of all or substantially all assets), and on the transaction actually being such a change; the retrieved text does not show whether a particular merger meets that definition.
+
+---
+
+packet_id: P17
+case_id: pinnacle_licensor
+Question: If Pinnacle as licensor undergoes a change of control, does the exclusive technology license become non-exclusive or give either party a termination right?
+Reviewer notes: The licensor and licensee triggers differ: a licensor control change preserves the agreement and current exclusivity and binds the successor.
+Candidate answer: No, on the retrieved text. A Change of Control of Pinnacle as Licensor does not convert the exclusive license to non-exclusive and gives neither party a termination or modification right. Section 14.6 says the agreement, including exclusivity (if then in effect), continues in full force and the successor or acquirer is bound by the Licensor's obligations. It expressly says the 14.1 conversion is not triggered and that no termination or modification right arises. This holds on the assumption that Pinnacle is the Licensor and that the transaction is a Change of Control of Licensor under 14.6. Termination rights unrelated to change of control, such as uncured material breach, remain available.
+
+---
+
+packet_id: P18
+case_id: compare_competitor_remedies
+Question: Compare TerraNode's infrastructure agreement and Meridian's flavor technology license: does acquisition by a competitor permit immediate termination in both, or does either require consent-breach notice and a cure opportunity?
+Reviewer notes: Compare contractual remedy procedures, assuming the relevant contractual competitor criteria are met. TerraNode remedy follows unauthorized assignment with notice and cure; Meridian has a separate immediate written-notice competitor right. This is a multi-document test.
+Candidate answer: No, not in both. Meridian's license (Section 8.3) lets the Licensor terminate immediately on written notice if the Licensee is acquired by, merges with, or comes under common control with a direct competitor in flavor systems, ingredients or formulations. The text shows no cure period or consent step, and it applies notwithstanding anything to the contrary. The right depends on the acquirer actually being a direct competitor as described. TerraNode's agreement has no immediate-termination right for a competitor acquisition in the retrieved text. Instead, a change of control needs prior written consent (9.1), which may reasonably be withheld if the acquirer or its affiliates are Direct Competitors (9.2). It also requires 45 days' notice (9.4). If an assignment or change of control occurs in violation of Article 9, the other party may terminate on 30 days' written notice, and that termination does not take effect if the required consent is obtained within 60 days of receiving the notice (5.5). So TerraNode involves a consent breach, notice and a cure opportunity, while Meridian does not on the face of 8.3. This is conditional on the acquirer qualifying as a competitor and on the unreviewed provisions noted below.
+
+---
+
+packet_id: P19
+case_id: meridian_competitor
+Question: Under Meridian's flavor technology license, what consent is required for a control acquisition, and what additional termination right applies to acquisition by a competing flavor business?
+Reviewer notes: A qualifying control change is a deemed assignment requiring discretionary express consent. The competitor clause supplies a separate immediate written-notice termination right.
+Candidate answer: Consent: A Change of Control of the Licensee (Solara) is deemed an assignment requiring Meridian's prior express written consent under Section 8.1. Change of Control means any person or group acquiring more than 50% of Licensee's equity or voting power, or a sale of all or substantially all of its assets. A transfer without consent is null and void. Additional termination right: independently of consent, Meridian may terminate immediately on written notice, with no cure period, if Licensee is acquired by, merges with, or comes under common control with an entity that directly competes with Meridian in developing, manufacturing, or selling flavor systems, flavor ingredients, or flavor formulations. This right is conditional on the acquirer qualifying as such a competitor. Whether Ridgeline qualifies is not established by the evidence. Its Flavor Innovation Lab develops proprietary flavoring compounds, but the evidence does not show that it competes directly with Meridian. Whether Meridian's consent to the deal waives the Section 8.3 right is not addressed by the text.
+
+---
+
+packet_id: P20
+case_id: novabridge_silence_pricing
+Question: Under NovaBridge's supply agreement, can silence after advance change-of-control notice remove the termination right, and what pricing changes apply if the buyer's acquirer exceeds $1 billion in revenue?
+Reviewer notes: At least 30-day prior notice and no timely written objection cause this termination right to lapse. Qualifying buyer acquisition resets pricing to the lower of current prices and Published Wholesale Schedule; minimum purchase commitment persists.
+Candidate answer: Silence can remove the termination right only if a valid advance notice was given: under Section 12.2 the other Party's termination right lapses if the Party undergoing the Change of Control gives at least 30 days' prior written notice of the anticipated Change of Control (describing the transaction, identifying the acquirer, stating the form and expected closing date, and delivered per Section 18.1) and the other Party fails to deliver a written objection within that 30-day period. The retrieved text does not state whether a defective notice starts the 30-day clock. The pricing change under Section 12.3 applies only if the acquiring entity (or its ultimate parent, if the acquirer is a subsidiary) has annual revenue exceeding $1,000,000,000 in its most recent audited financials or SEC annual report, measured as of execution of the definitive agreement; if so, all Product pricing resets, effective at closing, to the lower of current contract pricing and NovaBridge's then-current Published Wholesale Schedule, and this lasts for the rest of the Term including Renewal Terms. It is a downward reset, not an increase, and does not affect the Minimum Purchase Commitment.
+
+---
+
+packet_id: P21
+case_id: pinnacle_licensor
+Question: If Pinnacle as licensor undergoes a change of control, does the exclusive technology license become non-exclusive or give either party a termination right?
+Reviewer notes: The licensor and licensee triggers differ: a licensor control change preserves the agreement and current exclusivity and binds the successor.
+Candidate answer: Conditional on the Pinnacle transaction qualifying as a Change of Control under §1.8 and no amendment or contrary deal term applying: a change of control of Licensor (Pinnacle Data Systems, LLC) does not convert the exclusive license to non-exclusive and does not give either Party a termination or modification right under §14.6. The §14.1 automatic conversion is triggered only by a Change of Control of Licensee. Other termination routes (§12.3 uncured material breach, §12.4 insolvency) are not affected by the change of control itself. The answer 'no right found' is supported on the license text, but whether the Pinnacle deal is a §1.8 Change of Control depends on deal facts not in the retrieved evidence.
+
+---
+
+packet_id: P22
+case_id: terranode_competitor
+Question: Does TerraNode have termination rights if Aldersgate is acquired by a competitor?
+Reviewer notes: Competitor status requires the revenue definition and affiliate analysis. Acquisition alone is not an unconditional termination right: check consent breach, written notice and opportunity to cure. Section 9.3 is an alternative source of the cure rule, not a mandatory duplicate of 5.5.
+Candidate answer: Only conditionally and indirectly. The agreement has no stand-alone termination right for TerraNode triggered by a change of control. An acquisition of Aldersgate by a competitor is a change of control that needs TerraNode's prior written consent under Section 9.1. TerraNode may reasonably withhold consent if the acquirer, or its parents, Affiliates or portfolio companies, is a Direct Competitor in cloud infrastructure services (9.2). If Aldersgate closes without the required consent, the purported assignment is void and TerraNode may terminate on 30 days' written notice (5.5, 9.3). Termination does not take effect if Aldersgate obtains the required consent within 60 days after receiving the termination notice. Otherwise it takes effect when the 60 days end. The acquisition alone does not trigger termination, and whether the acquirer is a Direct Competitor cannot be confirmed because that term's definition was not retrieved.
+
+---
+
+packet_id: P23
+case_id: wellstone_options
+Question: Under Wellstone's manufacturing agreement, what termination or renegotiation options and notice deadlines apply after a change of control?
+Reviewer notes: 60-day termination notice within 90 days of control change; alternatively 60-day renegotiation followed by 30-day termination notice on failure. Transaction notice is due within 15 days of announcement/signing.
+Candidate answer: If a party undergoes a Change of Control (transfer of more than 50% of voting equity to a single acquirer or a group acting in concert), the other party may terminate on 60 days' written notice delivered within 90 days of the effective date of the Change of Control (§11.1). Alternatively, the non-affected party may elect to renegotiate pricing and volume in good faith for 60 days following notice of the Change of Control; if no agreement is reached in that period, it may terminate on 30 days' written notice (§11.2). Each party must also give written notice of an anticipated Change of Control within 15 days after public announcement or signing of a definitive agreement (§11.3). These rights depend on the deal meeting the definition and on which party is affected. The text does not state the deadline to elect renegotiation or whether the 30-day fallback termination must fall within the 90-day §11.1 window.
+
+---
+
+packet_id: P24
+case_id: wellstone_options
+Question: Under Wellstone's manufacturing agreement, what termination or renegotiation options and notice deadlines apply after a change of control?
+Reviewer notes: 60-day termination notice within 90 days of control change; alternatively 60-day renegotiation followed by 30-day termination notice on failure. Transaction notice is due within 15 days of announcement/signing.
+Candidate answer: Conditionally, Wellstone holds a change-of-control termination right under Section 11.1 if Solara undergoes a Change of Control (a transfer of more than 50% of voting equity to a single acquirer or group acting in concert). Wellstone may terminate on 60 days' written notice delivered within 90 days of the effective date of the Change of Control. Alternatively, under Section 11.2, Wellstone may elect to renegotiate pricing and volume commitments in good faith for 60 days following notice of the Change of Control, and if no agreement is reached, may terminate on 30 days' written notice. Under Section 11.3, each party must give written notice of any anticipated Change of Control no later than 15 days after public announcement or signing of a definitive agreement. The applicable dates depend on the signing and closing dates, which the retrieved memos do not reconcile, so no specific deadline can be fixed. The right is conditional on the transaction being a Change of Control under Section 1.1 and on the facts in the question matching the Wellstone agreement's parties.

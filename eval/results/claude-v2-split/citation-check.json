@@ -1,0 +1,98 @@
+{
+  "judge_model": null,
+  "scope": {
+    "claude:claude-haiku-5-5+claude-sonnet-5-5": {
+      "cited": 125,
+      "unlabeled_files": 16,
+      "off_gold": 16,
+      "off_gold_items": [
+        {
+          "case_id": "terranode_competitor",
+          "source": "deal-overview-memo.docx",
+          "legal_ref": "memo:V.B"
+        },
+        {
+          "case_id": "pinnacle_licensor",
+          "source": "pinnacle-ecommerce-agreement.docx",
+          "legal_ref": "13.1"
+        },
+        {
+          "case_id": "pinnacle_licensor",
+          "source": "pinnacle-ecommerce-agreement.docx",
+          "legal_ref": "14.3"
+        },
+        {
+          "case_id": "pinnacle_licensor",
+          "source": "pinnacle-ecommerce-agreement.docx",
+          "legal_ref": "13.4"
+        },
+        {
+          "case_id": "pinnacle_licensor",
+          "source": "deal-overview-memo.docx",
+          "legal_ref": "3"
+        },
+        {
+          "case_id": "pinnacle_licensor",
+          "source": "deal-overview-memo.docx",
+          "legal_ref": "memo:V.B"
+        },
+        {
+          "case_id": "pinnacle_licensor",
+          "source": "deal-overview-memo.docx",
+          "legal_ref": "memo:VIII"
+        },
+        {
+          "case_id": "continental_make_whole",
+          "source": "deal-overview-memo.docx",
+          "legal_ref": "memo:I"
+        },
+        {
+          "case_id": "continental_make_whole",
+          "source": "deal-overview-memo.docx",
+          "legal_ref": "memo:VI"
+        },
+        {
+          "case_id": "continental_make_whole",
+          "source": "deal-overview-memo.docx",
+          "legal_ref": "memo:VII"
+        },
+        {
+          "case_id": "meridian_competitor",
+          "source": "deal-summary-memo.docx",
+          "legal_ref": "memo:I"
+        },
+        {
+          "case_id": "meridian_competitor",
+          "source": "deal-summary-memo.docx",
+          "legal_ref": "memo:II"
+        },
+        {
+          "case_id": "meridian_competitor",
+          "source": "deal-summary-memo.docx",
+          "legal_ref": "memo:F"
+        },
+        {
+          "case_id": "meridian_competitor",
+          "source": "meridian-dpa.docx",
+          "legal_ref": "8.3"
+        },
+        {
+          "case_id": "meridian_competitor",
+          "source": "meridian-dpa.docx",
+          "legal_ref": "8.1"
+        },
+        {
+          "case_id": "meridian_competitor",
+          "source": "meridian-dpa.docx",
+          "legal_ref": "article:1"
+        }
+      ],
+      "off_gold_share": 0.128,
+      "unlabeled_files_share": 0.128
+    }
+  },
+  "rows": {
+    "claims": [],
+    "off_scope_passages": []
+  }
+}

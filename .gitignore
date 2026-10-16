@@ -1,0 +1,16 @@
+__pycache__/
+.pytest_cache/
+*.py[cod]
+.venv/
+.env
+.ipynb_checkpoints/
+data/
+artifacts/
+*.faiss
+*.npy
+*.pkl
+.ruff_cache/
+*.egg-info/
+*.zip
+# Blind-review key: regenerate with scripts/build_review_packets.py (same --seed); keep it away from reviewers
+eval/results/*/review/key.json

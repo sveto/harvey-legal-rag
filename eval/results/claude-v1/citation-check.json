@@ -1,0 +1,117 @@
+{
+  "judge_model": null,
+  "scope": {
+    "claude:claude-haiku-5-5": {
+      "cited": 102,
+      "unlabeled_files": 15,
+      "off_gold": 16,
+      "off_gold_items": [
+        {
+          "case_id": "terranode_competitor",
+          "source": "deal-overview-memo.docx",
+          "legal_ref": "memo:IV.B"
+        },
+        {
+          "case_id": "terranode_competitor",
+          "source": "deal-overview-memo.docx",
+          "legal_ref": "memo:IV.A"
+        },
+        {
+          "case_id": "terranode_competitor",
+          "source": "deal-overview-memo.docx",
+          "legal_ref": "memo:II.A"
+        },
+        {
+          "case_id": "terranode_competitor",
+          "source": "deal-overview-memo.docx",
+          "legal_ref": "2"
+        },
+        {
+          "case_id": "terranode_competitor",
+          "source": "novabridge-partnership.docx",
+          "legal_ref": "11.2"
+        },
+        {
+          "case_id": "terranode_competitor",
+          "source": "meridian-license-agreement.docx",
+          "legal_ref": "8.3"
+        },
+        {
+          "case_id": "pinnacle_licensee",
+          "source": "deal-overview-memo.docx",
+          "legal_ref": "memo:V.B"
+        },
+        {
+          "case_id": "pinnacle_licensee",
+          "source": "pinnacle-ecommerce-agreement.docx",
+          "legal_ref": "7.2"
+        },
+        {
+          "case_id": "wellstone_options",
+          "source": "deal-summary-memo.docx",
+          "legal_ref": "memo:D"
+        },
+        {
+          "case_id": "wellstone_options",
+          "source": "deal-summary-memo.docx",
+          "legal_ref": "memo:G"
+        },
+        {
+          "case_id": "wellstone_options",
+          "source": "deal-summary-memo.docx",
+          "legal_ref": "memo:II"
+        },
+        {
+          "case_id": "wellstone_options",
+          "source": "deal-overview-memo.docx",
+          "legal_ref": "memo:VI"
+        },
+        {
+          "case_id": "wellstone_options",
+          "source": "deal-overview-memo.docx",
+          "legal_ref": "memo:I"
+        },
+        {
+          "case_id": "meridian_competitor",
+          "source": "deal-summary-memo.docx",
+          "legal_ref": "memo:F"
+        },
+        {
+          "case_id": "meridian_competitor",
+          "source": "deal-overview-memo.docx",
+          "legal_ref": "memo:V.B"
+        },
+        {
+          "case_id": "meridian_competitor",
+          "source": "deal-summary-memo.docx",
+          "legal_ref": "memo:I"
+        }
+      ],
+      "off_gold_share": 0.1568627450980392,
+      "unlabeled_files_share": 0.14705882352941177
+    },
+    "claude:claude-sonnet-5-5": {
+      "cited": 86,
+      "unlabeled_files": 2,
+      "off_gold": 2,
+      "off_gold_items": [
+        {
+          "case_id": "meridian_competitor",
+          "source": "deal-summary-memo.docx",
+          "legal_ref": "memo:F"
+        },
+        {
+          "case_id": "meridian_competitor",
+          "source": "deal-summary-memo.docx",
+          "legal_ref": "memo:II"
+        }
+      ],
+      "off_gold_share": 0.023255813953488372,
+      "unlabeled_files_share": 0.023255813953488372
+    }
+  },
+  "rows": {
+    "claims": [],
+    "off_scope_passages": []
+  }
+}

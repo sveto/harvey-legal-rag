@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "name": "Harvey change-of-control evidence benchmark v1",
+  "label_quality": "silver: authored from local DOCX clauses; not independently reviewed legal gold",
+  "dataset_url": "https://github.com/harveyai/harvey-labs/tree/main/tasks/corporate-ma/analyze-change-of-control-provisions-across-targets-material-contracts",
+  "policy": "Evaluation-only. Never index this file or pass labels, sources or answer notes to retrieval. Dev cases reflect previously explored questions; eval cases are new probes, not an independently held-out benchmark.",
+  "cases": [
+    {
+      "id": "terranode_competitor",
+      "split": "dev",
+      "question": "Does TerraNode have termination rights if Aldersgate is acquired by a competitor?",
+      "required_evidence": [
+        {"id": "competitor_definition", "role": "competitor", "any_of": [{"source": "terranode-isa.docx", "legal_ref": "article:1", "contains": "derives more than fifteen percent"}]},
+        {"id": "consent_requirement", "role": "consent", "any_of": [{"source": "terranode-isa.docx", "legal_ref": "9.1", "contains": "without the prior written consent"}]},
+        {"id": "competitor_carveout", "role": "competitor", "any_of": [{"source": "terranode-isa.docx", "legal_ref": "9.2", "contains": "revenue composition"}]},
+        {"id": "termination_notice_and_cure", "role": "termination_and_cure", "any_of": [{"source": "terranode-isa.docx", "legal_ref": "5.5", "contains": "sixty (60) days"}, {"source": "terranode-isa.docx", "legal_ref": "9.3", "contains": "sixty (60) days"}]}
+      ],
+      "supporting_evidence": [{"source": "terranode-isa.docx", "legal_ref": "9.4", "contains": "forty-five (45) days"}],
+      "answer_notes": "Competitor status requires the revenue definition and affiliate analysis. Acquisition alone is not an unconditional termination right: check consent breach, written notice and opportunity to cure. Section 9.3 is an alternative source of the cure rule, not a mandatory duplicate of 5.5."
+    },
+    {
+      "id": "pinnacle_licensee",
+      "split": "dev",
+      "question": "What happens to Pinnacle's exclusive technology license and fees after a change of control of the licensee, and can either party terminate?",
+      "required_evidence": [
+        {"id": "control_definition", "role": "definition", "any_of": [{"source": "pinnacle-license.docx", "legal_ref": "1.8", "contains": "more than 50%"}]},
+        {"id": "exclusivity_conversion", "role": "exclusivity", "any_of": [{"source": "pinnacle-license.docx", "legal_ref": "14.1", "contains": "automatically convert to a non-exclusive license"}]},
+        {"id": "unchanged_fees", "role": "payment", "any_of": [{"source": "pinnacle-license.docx", "legal_ref": "14.2", "contains": "Annual License Fee"}]},
+        {"id": "no_termination", "role": "termination", "any_of": [{"source": "pinnacle-license.docx", "legal_ref": "14.5", "contains": "shall not give rise to a right of termination"}]}
+      ],
+      "supporting_evidence": [{"source": "pinnacle-license.docx", "legal_ref": "14.4", "contains": "deemed to have withheld its consent"}],
+      "answer_notes": "Conversion is automatic absent prior written consent to retain exclusivity. Payment duties persist; the licensee control change itself confers no termination right."
+    },
+    {
+      "id": "continental_acceleration",
+      "split": "dev",
+      "question": "Under the First Continental credit agreement, does a change of control automatically accelerate the debt, or must the agent declare a default and allow a cure period?",
+      "required_evidence": [
+        {"id": "automatic_default_no_cure", "role": "cure", "any_of": [{"source": "first-continental-credit-agreement.docx", "legal_ref": "7.09(a)", "contains": "without any cure period"}]},
+        {"id": "automatic_acceleration", "role": "acceleration", "any_of": [{"source": "first-continental-credit-agreement.docx", "legal_ref": "7.09(b)", "contains": "shall not require any election"}]},
+        {"id": "general_remedies_exception", "role": "acceleration", "any_of": [{"source": "first-continental-credit-agreement.docx", "legal_ref": "8.01", "contains": "shall not require any declaration"}]}
+      ],
+      "supporting_evidence": [{"source": "first-continental-credit-agreement.docx", "legal_ref": "2.05(a)", "contains": "mandatory and unconditional"}],
+      "answer_notes": "Distinguish the automatic change-of-control remedy from the ordinary declaration mechanism. This question assumes a defined Change of Control has occurred."
+    },
+    {
+      "id": "terranode_notice_affiliate",
+      "split": "eval",
+      "question": "For TerraNode's infrastructure agreement, what consent and advance notice are needed for a change of control versus an assignment to an affiliate, and does silence mean consent?",
+      "required_evidence": [
+        {"id": "general_consent", "role": "consent", "any_of": [{"source": "terranode-isa.docx", "legal_ref": "9.1", "contains": "without the prior written consent"}]},
+        {"id": "notice_and_silence", "role": "notice", "any_of": [{"source": "terranode-isa.docx", "legal_ref": "9.4", "contains": "shall not be deemed to constitute consent"}]},
+        {"id": "affiliate_exception_conditions", "role": "consent", "any_of": [{"source": "terranode-isa.docx", "legal_ref": "9.5", "contains": "jointly and severally liable"}]}
+      ],
+      "answer_notes": "General control transactions: 45-day notice and 30-day response, silence is not consent. Affiliate assignment has a conditional exception including 15-day notice, written assumption and continuing liability."
+    },
+    {
+      "id": "pinnacle_licensor",
+      "split": "eval",
+      "question": "If Pinnacle as licensor undergoes a change of control, does the exclusive technology license become non-exclusive or give either party a termination right?",
+      "required_evidence": [
+        {"id": "licensor_control_rule", "role": "exclusivity", "any_of": [{"source": "pinnacle-license.docx", "legal_ref": "14.6", "contains": "shall not trigger the automatic conversion"}]},
+        {"id": "licensee_rule_contrast", "role": "exclusivity", "any_of": [{"source": "pinnacle-license.docx", "legal_ref": "14.1", "contains": "Change of Control (as defined in Section 1.8) of Licensee"}]}
+      ],
+      "answer_notes": "The licensor and licensee triggers differ: a licensor control change preserves the agreement and current exclusivity and binds the successor."
+    },
+    {
+      "id": "continental_make_whole",
+      "split": "eval",
+      "question": "What repayment and make-whole premium does the First Continental agreement require when a change of control occurs, and when is the premium inapplicable?",
+      "required_evidence": [
+        {"id": "mandatory_prepayment", "role": "acceleration", "any_of": [{"source": "first-continental-credit-agreement.docx", "legal_ref": "2.05(a)", "contains": "mandatory and unconditional"}]},
+        {"id": "premium_and_exceptions", "role": "payment", "any_of": [{"source": "first-continental-credit-agreement.docx", "legal_ref": "2.05(c)", "contains": "The Make-Whole Amount shall not apply"}]}
+      ],
+      "answer_notes": "Repay loans, interest, fees and applicable premium at control change (next Business Day if needed). Premium is 2%; inspect expiration and scheduled-amortization exceptions and the date-of-control proviso."
+    },
+    {
+      "id": "wellstone_options",
+      "split": "eval",
+      "question": "Under Wellstone's manufacturing agreement, what termination or renegotiation options and notice deadlines apply after a change of control?",
+      "required_evidence": [
+        {"id": "termination_window", "role": "termination", "any_of": [{"source": "wellstone-manufacturing-agreement.docx", "legal_ref": "11.1", "contains": "within ninety (90) days"}]},
+        {"id": "renegotiation_option", "role": "termination", "any_of": [{"source": "wellstone-manufacturing-agreement.docx", "legal_ref": "11.2", "contains": "renegotiate pricing and volume commitments"}]},
+        {"id": "transaction_notice", "role": "notice", "any_of": [{"source": "wellstone-manufacturing-agreement.docx", "legal_ref": "11.3", "contains": "fifteen (15) days"}]}
+      ],
+      "supporting_evidence": [{"source": "wellstone-manufacturing-agreement.docx", "legal_ref": "15.8", "contains": "successor by merger"}],
+      "answer_notes": "60-day termination notice within 90 days of control change; alternatively 60-day renegotiation followed by 30-day termination notice on failure. Transaction notice is due within 15 days of announcement/signing."
+    },
+    {
+      "id": "meridian_competitor",
+      "split": "eval",
+      "question": "Under Meridian's flavor technology license, what consent is required for a control acquisition, and what additional termination right applies to acquisition by a competing flavor business?",
+      "required_evidence": [
+        {"id": "assignment_consent", "role": "consent", "any_of": [{"source": "meridian-license-agreement.docx", "legal_ref": "8.1", "contains": "prior express written consent"}]},
+        {"id": "deemed_assignment", "role": "consent", "any_of": [{"source": "meridian-license-agreement.docx", "legal_ref": "8.2", "contains": "shall be deemed an assignment"}]},
+        {"id": "competitor_termination", "role": "termination", "any_of": [{"source": "meridian-license-agreement.docx", "legal_ref": "8.3", "contains": "immediately upon written notice"}]},
+        {"id": "consent_discretion", "role": "consent", "any_of": [{"source": "meridian-license-agreement.docx", "legal_ref": "8.5", "contains": "sole and absolute discretion"}]}
+      ],
+      "supporting_evidence": [{"source": "meridian-license-agreement.docx", "legal_ref": "8.4", "contains": "fifteen (15) business days"}],
+      "answer_notes": "A qualifying control change is a deemed assignment requiring discretionary express consent. The competitor clause supplies a separate immediate written-notice termination right."
+    },
+    {
+      "id": "novabridge_silence_pricing",
+      "split": "eval",
+      "question": "Under NovaBridge's supply agreement, can silence after advance change-of-control notice remove the termination right, and what pricing changes apply if the buyer's acquirer exceeds $1 billion in revenue?",
+      "required_evidence": [
+        {"id": "silence_lapses_termination", "role": "termination", "any_of": [{"source": "novabridge-supply-agreement.docx", "legal_ref": "12.2", "contains": "termination right set forth in this Section 12.2 shall lapse"}]},
+        {"id": "pricing_threshold_and_reset", "role": "payment", "any_of": [{"source": "novabridge-supply-agreement.docx", "legal_ref": "12.3", "contains": "reset to the lower of"}]}
+      ],
+      "supporting_evidence": [{"source": "novabridge-supply-agreement.docx", "legal_ref": "12.1", "contains": "more than fifty percent"}],
+      "answer_notes": "At least 30-day prior notice and no timely written objection cause this termination right to lapse. Qualifying buyer acquisition resets pricing to the lower of current prices and Published Wholesale Schedule; minimum purchase commitment persists."
+    },
+    {
+      "id": "apex_msa_successor",
+      "split": "eval",
+      "question": "Does the permitted assignment to a merger successor in Apex's master services agreement eliminate the customer's change-of-control termination right? State the exercise and notice periods.",
+      "required_evidence": [
+        {"id": "assignment_subject_to_control", "role": "consent", "any_of": [{"source": "apex-msa.docx", "legal_ref": "16.1", "contains": "shall not limit or modify"}]},
+        {"id": "customer_termination_periods", "role": "termination", "any_of": [{"source": "apex-msa.docx", "legal_ref": "12.3", "contains": "one hundred twenty (120) days"}]}
+      ],
+      "answer_notes": "The assignment exception is subject to 12.3: customer may give 60-day notice within 120 days of receiving provider's written control-change notice. Provider must notify within ten business days after consummation."
+    },
+    {
+      "id": "terraverde_recapture",
+      "split": "eval",
+      "question": "Does TerraVerde's lease treat a transfer of more than 50% of the tenant as an assignment, and what consent and landlord recapture rights apply?",
+      "required_evidence": [
+        {"id": "general_assignment_consent", "role": "consent", "any_of": [{"source": "terraverde-lease-agreement.docx", "legal_ref": "21", "contains": "without the prior written consent of Landlord"}]},
+        {"id": "control_assignment_and_recapture", "role": "termination", "any_of": [{"source": "terraverde-lease-agreement.docx", "legal_ref": "22", "contains": "one hundred eighty (180) days"}]}
+      ],
+      "answer_notes": "Section 22 treats control transfers as assignments. Landlord may elect recapture within 30 days of notice with termination 180 days after exercise; otherwise inspect consent conditions. Parser stores subclauses together under sections 21 and 22."
+    },
+    {
+      "id": "compare_competitor_remedies",
+      "split": "eval",
+      "question": "Compare TerraNode's infrastructure agreement and Meridian's flavor technology license: does acquisition by a competitor permit immediate termination in both, or does either require consent-breach notice and a cure opportunity?",
+      "required_evidence": [
+        {"id": "terranode_consent_rule", "role": "consent", "any_of": [{"source": "terranode-isa.docx", "legal_ref": "9.1", "contains": "without the prior written consent"}]},
+        {"id": "terranode_competitor_rule", "role": "competitor", "any_of": [{"source": "terranode-isa.docx", "legal_ref": "9.2", "contains": "reasonable basis for withholding consent"}]},
+        {"id": "terranode_notice_and_cure", "role": "cure", "any_of": [{"source": "terranode-isa.docx", "legal_ref": "5.5", "contains": "sixty (60) days"}, {"source": "terranode-isa.docx", "legal_ref": "9.3", "contains": "sixty (60) days"}]},
+        {"id": "meridian_immediate_right", "role": "termination", "any_of": [{"source": "meridian-license-agreement.docx", "legal_ref": "8.3", "contains": "immediately upon written notice"}]}
+      ],
+      "supporting_evidence": [{"source": "terranode-isa.docx", "legal_ref": "article:1", "contains": "derives more than fifteen percent"}],
+      "answer_notes": "Compare contractual remedy procedures, assuming the relevant contractual competitor criteria are met. TerraNode remedy follows unauthorized assignment with notice and cure; Meridian has a separate immediate written-notice competitor right. This is a multi-document test."
+    }
+  ]
+}
