@@ -30,12 +30,16 @@ party) is stated or directly implied by the passages. 'partial': some elements a
 missing, stronger than the text, or attributed to the wrong clause. 'not_supported': the passages do not support it."""
 
 WORD_NUMBERS: dict[str, str] = {
-    "one": "1", "two": "2", "three": "3", "four": "4", "five": "5", "six": "6", "seven": "7", "eight": "8",
+    "two": "2", "three": "3", "four": "4", "five": "5", "six": "6", "seven": "7", "eight": "8",
     "nine": "9", "ten": "10", "twelve": "12", "fifteen": "15", "twenty": "20", "thirty": "30",
-    "forty-five": "45", "forty": "40", "sixty": "60", "ninety": "90", "one hundred twenty": "120",
+    "forty-five": "45", "forty": "40", "fifty": "50", "sixty": "60", "ninety": "90",
+    "one hundred twenty": "120", "one hundred": "100",
 }
 SECTION_REF_RE = re.compile(r"(?:\bsections?|§§?)\s*((?:\d{1,3}\.)?\d{1,3}(?:\([a-z0-9ivx]+\))*)", re.I)
 NUMBER_RE = re.compile(r"\d[\d,]*(?:\.\d+)?")
+# Parts of the contract (not quantities): 'Article 1', 'Exhibit B', and dotted refs such as '12.3(a)' without 'Section'.
+PART_REF_RE = re.compile(r"\b(?:articles?|exhibits?|schedules?|appendix)\s+[A-Z0-9]+(?:\.\d+)*", re.I)
+DOTTED_REF_RE = re.compile(r"(?<![$\d.,])(\d{1,3}\.\d{1,3}(?:\([a-z0-9ivx]+\))*)(?![\d%]|\s*(?:%|percent))")
 WORD_RE = re.compile(r"\b(" + "|".join(sorted(WORD_NUMBERS, key=len, reverse=True)) + r")\b", re.I)
 
 
@@ -50,7 +54,7 @@ def cited_claims(report: Record) -> list[Record]:
 
 
 def _numbers(text: str) -> set[str]:
-    text = SECTION_REF_RE.sub(" ", text)
+    text = DOTTED_REF_RE.sub(" ", PART_REF_RE.sub(" ", SECTION_REF_RE.sub(" ", text)))
     found = {n.replace(",", "").rstrip(".") for n in NUMBER_RE.findall(text)}
     found |= {WORD_NUMBERS[w.lower()] for w in WORD_RE.findall(text)}
     return found
@@ -71,7 +75,9 @@ def numeric_check(claim: Record) -> Record:
     missing_numbers = sorted(_numbers(claim["statement"]) - corpus_numbers, key=lambda n: (len(n), n))
     available = {_normalize_ref((c.get("legal_ref") or "").split(" / ")[-1]) for c in passages}
     available |= {_normalize_ref(m) for m in SECTION_REF_RE.findall(corpus)}
-    missing_refs = [r for r in dict.fromkeys(SECTION_REF_RE.findall(claim["statement"]))
+    stated_refs = SECTION_REF_RE.findall(claim["statement"]) + DOTTED_REF_RE.findall(claim["statement"])
+    available |= {_normalize_ref(m) for m in DOTTED_REF_RE.findall(corpus)}
+    missing_refs = [r for r in dict.fromkeys(stated_refs)
                     if _normalize_ref(r) not in available and not any(a.startswith(_normalize_ref(r)) for a in available if a)]
     return {"missing_numbers": missing_numbers, "missing_section_refs": missing_refs,
             "flagged": bool(missing_numbers or missing_refs or not passages)}

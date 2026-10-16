@@ -74,8 +74,8 @@ python scripts/evaluate_retrieval.py --device cpu --save-dir artifacts/evaluatio
 ```
 
 Use `--device cuda --batch-size 32` for indexing on a Colab GPU; see
-[notebooks/COLAB.md](notebooks/COLAB.md). GPU execution has not been verified in
-this workspace. Reuse valid indexes and model instances; avoid unnecessary GPU
+[notebooks/COLAB.md](notebooks/COLAB.md). A full benchmark run was verified on a Colab Tesla T4
+(`eval/results/claude-v3-t4/`); indexing on GPU was run in Colab earlier but its timings were not recorded. Reuse valid indexes and model instances; avoid unnecessary GPU
 time and re-embedding. Rebuild indexes whenever parsed chunk content changes.
 
 ## Data and legal-evidence invariants

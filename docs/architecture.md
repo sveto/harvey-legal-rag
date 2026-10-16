@@ -42,8 +42,9 @@ keeping index search on CPU avoids GPU-index setup and leaves Colab GPU memory
 for neural inference. BGE embeddings are normalized, so inner product acts as
 cosine similarity. Models load once per runner and the existing index can be
 reused. No quantization or approximate-vector-search service is needed for this
-demonstration. The published measurements are CPU-only; free-Colab GPU throughput
-and session availability are not established by them.
+demonstration. The CPU benchmark (`cpu-v1`) and one Colab Tesla T4 run (`claude-v3-t4`)
+are recorded; T4 cut local retrieval time per Claude question from about 25 s to 3.6 s (see
+[evaluation-results.md](evaluation-results.md)). Free-tier session availability is not established.
 
 The original agent applies bounded follow-up retrieval to evidence gaps because
 multi-clause legal questions often need a chain of provisions. LangGraph makes

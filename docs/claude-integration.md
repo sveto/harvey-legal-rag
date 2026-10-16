@@ -106,7 +106,7 @@ available in Colab. Authentication is `ANTHROPIC_API_KEY` from the environment o
 - Review tooling: [EVALUATION_PROMPT.md](../eval/EVALUATION_PROMPT.md) rubric and `scripts/build_review_packets.py`.
   `--refusal-fallback` enables the server-side fallback beta; it is untested here and off by default.
 - Not done: independent or automatic generated-answer grading, full parent-section loading, repeat-run variance,
-  held-out questions, a recorded Colab GPU run of this code. The `--claude-models` option adds Claude methods
+  held-out questions. A Colab T4 run of this code is recorded (`eval/results/claude-v3-t4/`). The `--claude-models` option adds Claude methods
   to `evaluate_retrieval.py` (`claude:<model>` or `claude:<search>+<answer>`).
   Smoke test: `python scripts/run_claude_agent.py --benchmark eval/benchmark.json --limit 1`.
 

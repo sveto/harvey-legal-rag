@@ -188,7 +188,7 @@ The 12-question benchmark compares Dense, BM25, Hybrid, Hybrid + Rerank and Agen
 
 ## Known limitations
 
-This is a reconstructed, modular version of the notebook code, not a byte-for-byte copy of earlier Colab cells. **Chunk counts and ranks may change** after parser repair. Enable `--token-aware` to avoid embedding truncation; query/passage truncation in the 512-token reranker remains a limitation. LangGraph evidence retrieval, the Claude agent, an evidence benchmark and local JSON traces are implemented. Generated-answer quality is only reviewed by hand (no automatic faithfulness metric), hosted tracing is not implemented, and the Claude results are single runs on 12 silver-labeled questions. Colab GPU timings of the full benchmark have not been recorded.
+This is a reconstructed, modular version of the notebook code, not a byte-for-byte copy of earlier Colab cells. **Chunk counts and ranks may change** after parser repair. Enable `--token-aware` to avoid embedding truncation; query/passage truncation in the 512-token reranker remains a limitation. LangGraph evidence retrieval, the Claude agent, an evidence benchmark and local JSON traces are implemented. Generated-answer quality is only reviewed by hand (no automatic faithfulness metric), hosted tracing is not implemented, and the Claude results are single runs on 12 silver-labeled questions. A full benchmark run on a Colab Tesla T4 is recorded in `eval/results/claude-v3-t4/`; indexing on GPU was not timed.
 
 
 ## Contributor checks
@@ -234,4 +234,5 @@ implemented. See [architecture](docs/architecture.md) for design choices and lim
 - [Evaluation protocol](docs/evaluation.md) and [measured CPU results](docs/evaluation-results.md).
 - [Colab instructions](notebooks/COLAB.md).
 - [Claude integration guide](docs/claude-integration.md) (implementation, auth, why not Agent SDK / Ragas / DeepEval) and [contributor instructions](CLAUDE.md).
+- [Project report](docs/final-report.md): what was built, measured results, weaknesses, self-assessment.
 - [Answer review rubric](eval/EVALUATION_PROMPT.md); `scripts/build_review_packets.py` and `scripts/check_citations.py` (see the evaluation protocol).

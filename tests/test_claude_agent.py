@@ -297,3 +297,23 @@ def test_off_gold_passages_dedupe_and_relevance_judge() -> None:
     assert ok["verdict"] == "useful_context" and bad["verdict"] == "error"
     summary = summarize_relevance([{"method": "m", **ok}, {"method": "m", **bad}])["m"]
     assert summary["useful_context"] == 1 and summary["error"] == 1
+
+
+def test_numeric_check_ignores_part_refs_and_dotted_section_numbers() -> None:
+    from legal_rag.citation_check import numeric_check
+    text = "Under Article 1 and Exhibit B, Provider shall give twelve months of Transition Services. 2.0% premium. See 12.3(a)."
+    ok = numeric_check(_claim("Per Article 1 and 12.3(a), twelve months of services and a 2.0% premium apply, in one or a series.", text, ref="12.3"))
+    assert not ok["flagged"], ok
+    bad = numeric_check(_claim("A 100% stock purchase qualifies; see 14.6.", text, ref="12.3"))
+    assert bad["missing_numbers"] == ["100"] and bad["missing_section_refs"] == ["14.6"]
+
+
+def test_answer_prompt_forbids_mentioning_the_investigator_note(monkeypatch: MonkeyPatch) -> None:
+    client = FakeClient([
+        reply([text_block(json.dumps(PLAN))]),
+        reply([tool_block("t1", "search_corpus", {"query": "c", "source": None})], "tool_use"),
+        reply([text_block("note")]),
+        reply([text_block(json.dumps(ANSWER))]),
+    ])
+    make_agent(client, monkeypatch).run("q")
+    assert "never mention or quote it" in client.requests[-1]["messages"][0]["content"]

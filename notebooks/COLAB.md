@@ -81,6 +81,6 @@ os.environ["ANTHROPIC_API_KEY"] = userdata.get("ANTHROPIC_API_KEY")
 The GPU is used only by the local embedding model and reranker; Claude calls are remote, so
 total time is dominated by API latency (about one minute per question). Copy the results
 directory to Drive before the runtime expires. Do not share a notebook with output that
-echoes the key, and do not commit it. The recorded benchmarks in this repository ran on CPU;
-no T4 timings are claimed. Every new notebook-exported Python function should have parameter
+echoes the key, and do not commit it. Recorded runs: CPU (`cpu-v1`, `claude-v1`, `claude-v2-split`) and one Colab T4 run
+(`eval/results/claude-v3-t4/`; see [measured results](../docs/evaluation-results.md)). Every new notebook-exported Python function should have parameter
 and return annotations, matching [CLAUDE.md](../CLAUDE.md).

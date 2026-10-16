@@ -199,3 +199,102 @@ Many are deal memos (transaction facts the questions' answers legitimately use),
 (for example NovaBridge Partnership §11.2 for a TerraNode question, Pinnacle E-commerce for a Pinnacle licensor question).
 Whether these citations helped or mixed contracts is **not yet judged**: the relevance judge needs the cited passage text,
 which these runs did not store; it runs on the next re-run. Retrieval ESR/CER do not see this evidence at all.
+
+
+## Colab T4 run, same configuration repeated (`claude-v3-t4`, 2026-10-16)
+
+Raw data: [eval/results/claude-v3-t4/](../eval/results/claude-v3-t4/) (`report.md`, `results.json` incl. `cited_claims`,
+`queries.jsonl`, `citation-check.json`). Colab free tier, **Tesla T4 (CUDA)**, existing index reused, five baselines plus
+`claude-haiku-5-5+claude-sonnet-5-5` (per-question cost cap $0.15). It is a second independent run of the `claude-v2-split`
+configuration, so it also shows run-to-run variation.
+
+| Method | ESR@5 | CER@5 | ESR@10 | CER@10 | p50 latency (T4) | p50 latency (CPU) |
+|---|---:|---:|---:|---:|---:|---:|
+| Dense | 79.2% | 66.7% | 83.3% | 66.7% | 15 ms | 42 ms |
+| BM25 | 47.9% | 25.0% | 56.9% | 33.3% | 10 ms | 4 ms |
+| Hybrid | 74.3% | 58.3% | 81.2% | 66.7% | 22 ms | 30 ms |
+| Hybrid + Rerank | 72.9% | 58.3% | 85.4% | 66.7% | 1.07 s | 6.9-7.0 s |
+| Agent v2 | 63.9% | 33.3% | 63.9% | 33.3% | 1.15 s | 7.7 s |
+| Haiku + Sonnet answer | 95.8% | 91.7% | 100% | 100% | 36.4 s | 57.8 s |
+
+**GPU effect.** Baseline retrieval metrics are identical to the CPU runs; only latency changed. Reranking is about 6.5x faster
+on the T4. For the Claude agent, mean local retrieval time per question fell from 25.5 s (CPU, `claude-v2-split`) to 3.6 s,
+while API time stayed about 31-33 s, so the T4 helps the local models and the Claude latency is now dominated by API calls.
+(Hardware, packages and hashes are in `results.json` metadata; one run per setting, so treat speedups as indicative.)
+
+**Repeatability of the Claude configuration (v2-split vs v3-t4, same settings).**
+
+| | v2-split (CPU) | v3-t4 (T4) |
+|---|---:|---:|
+| ESR@5 / CER@5 | 95.8% / 83.3% | 95.8% / 91.7% |
+| ESR@10 / CER@10 | 100% / 100% | 100% / 100% |
+| Cited ESR / CER | 100% / 100% | 100% / 100% |
+| Cited sections per question | 10.4 | 9.6 |
+| Tool calls per question (8-call limit hit) | 7.1 (5 of 12) | 6.9 (3 of 12) |
+| Cost per question | $0.046 | $0.0455 (total $0.546) |
+| Cited sections outside the question's labeled files | 13% | 3% |
+
+Retrieval metrics at cutoff 10 and cost reproduced; CER@5 moved by one question; how often the agent cites unlabeled files
+varied noticeably (13% vs 3%). This is two runs on 12 silver-labeled questions, not a variance estimate.
+
+**Citation checks** (`scripts/check_citations.py`, 81 claims, judge `claude-haiku-5-5`, cost about $0.017):
+
+| Check | Result |
+|---|---|
+| Support judge | 68% supported (55), 31% partial (25), 1% not supported (1 claim) |
+| Cited sections outside the question's labeled files | 3 of 115 (3%) |
+| Relevance judge on those 3 passages | 1 needed, 2 useful_context, 0 irrelevant, 0 wrong_contract |
+| Numeric/section check | 11 flagged with the first version of the check (see below) |
+
+How to read them (a same-family judge, partly checked by hand on a sample of reasons):
+- `partial` is mostly compound claims where the cited passage supports most elements but not all (for example a claim that
+  also asserts that notices do not delay acceleration, which the text does not state), so it flags inference beyond the text,
+  and part of the 31% reflects claim granularity rather than errors. Questions with the most partial verdicts:
+  `compare_competitor_remedies` (5 of 8), `terranode_notice_affiliate` (4 of 7). No claim in `terraverde_recapture` and
+  `continental_make_whole` was partial. The single `not_supported` claim says a sibling agreement "does not govern this
+  question", which the passages do not state.
+- The first numeric check was noisy: of 11 flags, 7 were claims the judge rated supported (dotted section numbers such as
+  `12.3(a)`, "Article 1" and "one or a series" were read as quantities). The check was then fixed (part references, dotted
+  section numbers without "Section", and "one" are no longer read as quantities); re-evaluated on these claims it flags 5, and
+  the one inspected (a "100% stock purchase" in a claim about Change of Control) is a real flag: the figure is not in the
+  cited passage. `citation-check.json` in the run folder keeps the original 11 flags.
+- The three off-scope passages were relevant (one needed, two useful context), unlike the irrelevant 10-K and fund-overview
+  citations seen in the one-question smoke run, so off-scope citations vary between runs.
+
+
+## Independent answer review of `claude-v3-t4`
+
+Verdicts: [answer-review.json](../eval/results/claude-v3-t4/review/answer-review.json). A fresh LLM session with no project
+context (model not recorded) graded the 12 blind packets (question, `answer_notes`, answer) with the rubric in
+[EVALUATION_PROMPT.md](../eval/EVALUATION_PROMPT.md); `citation_support` was not scored because packets carry no passages.
+This is more independent than the earlier review by the assistant that helped build the system, but still an LLM, not a lawyer.
+
+| Verdict | Questions |
+|---|---:|
+| correct | 7 |
+| mostly_correct | 4 (`pinnacle_licensee`, `terraverde_recapture`, `continental_acceleration`, `wellstone_options`) |
+| incomplete | 1 (`pinnacle_licensor`) |
+| wrong | 0 |
+
+Mean criterion scores (0-2): coverage 1.92, correctness 1.92, conditions 1.92, no_overclaim 1.75, gaps_honest 1.75 (92.5% of the
+maximum). Two answers had missed required points; five had claims beyond the notes.
+
+**What the reviewer found.**
+- `pinnacle_licensor`: the answer correctly says there is no conversion and no termination right but does not state that the
+  agreement and exclusivity continue and bind the successor. The same configuration's earlier answer (`claude-v2-split`)
+  did say so, so completeness varies between runs.
+- `continental_acceleration`: acceleration is distinguished correctly from the §8.01 declaration mechanism, but the added
+  statement that the make-whole applies only if the Change of Control date is before 1 November 2025 was judged an
+  oversimplified side claim.
+- `wellstone_options`: all deadlines present, but the answer ended with extraneous caveats and a reference to an
+  "investigator's note", an internal working input that should not appear in an answer.
+- Most "unsupported claims" mean "not in the notes", not "wrong": the notes are short and the contracts contain more terms
+  (security deposit, parent guaranty, insolvency termination). The reviewer could not check them. Do not read the 5 of 12 as 5 errors.
+
+**Action taken.** The leak of the internal note (1 of 12 answers here, 1 of 12 in `claude-v2-split`) was a prompt defect:
+the answer prompt now tells the model never to mention the investigator's note. This changes the configuration hash and
+has not been re-run, so the recorded results still contain the leak.
+
+**Agreement with the assistant's own review of the split run.** The assistant found no substantive error on the earlier
+run; the independent reviewer found one omission and one oversimplification in this run. Different runs and different
+reviewers: the honest summary is that most answers match the notes and details beyond the notes need a lawyer.

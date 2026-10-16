@@ -1,0 +1,1339 @@
+{
+  "judge_model": "claude-haiku-5-5",
+  "scope": {
+    "claude:claude-haiku-5-5+claude-sonnet-5-5": {
+      "cited": 115,
+      "unlabeled_files": 3,
+      "off_gold": 3,
+      "off_gold_items": [
+        {
+          "case_id": "terranode_notice_affiliate",
+          "source": "deal-overview-memo.docx",
+          "legal_ref": "memo:V.B"
+        },
+        {
+          "case_id": "novabridge_silence_pricing",
+          "source": "novabridge-partnership.docx",
+          "legal_ref": "11.1"
+        },
+        {
+          "case_id": "novabridge_silence_pricing",
+          "source": "novabridge-partnership.docx",
+          "legal_ref": "article:1"
+        }
+      ],
+      "off_gold_share": 0.02608695652173913,
+      "unlabeled_files_share": 0.02608695652173913
+    }
+  },
+  "support": {
+    "claude:claude-haiku-5-5+claude-sonnet-5-5": {
+      "claims": 81,
+      "judged": 81,
+      "supported": 0.6790123456790124,
+      "partial": 0.30864197530864196,
+      "not_supported": 0.012345679012345678,
+      "judge_errors": 0,
+      "numeric_flagged": 0.13580246913580246,
+      "judge_cost_usd": 0.0168523
+    }
+  },
+  "relevance": {
+    "claude:claude-haiku-5-5+claude-sonnet-5-5": {
+      "passages": 3,
+      "judged": 3,
+      "needed": 1,
+      "useful_context": 2,
+      "irrelevant": 0,
+      "wrong_contract": 0,
+      "error": 0
+    }
+  },
+  "rows": {
+    "claims": [
+      {
+        "case_id": "terranode_competitor",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "supported",
+        "reason": "Section 9.1 states that assignment in connection with a change of control, merger, or acquisition requires the other Party's prior written consent, not to be unreasonably withheld, conditioned, or delayed, and that non-compliant assignments are null and void.",
+        "input_tokens": 827,
+        "output_tokens": 96,
+        "cost_usd": 0.00013069999999999998,
+        "statement": "A change of control, merger or acquisition of a party is treated as an assignment requiring the other party's prior written consent, not to be unreasonably withheld, conditioned or delayed; non-consented assignments are void."
+      },
+      {
+        "case_id": "terranode_competitor",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "supported",
+        "reason": "Section 9.2 states consent may be withheld on a reasonable basis if the acquirer or its parent, Affiliate, or common-control entity is a Direct Competitor in cloud infrastructure services, and allows Provider to consider Affiliates' revenue composition and portfolio companies, with E14 defining Direct Competitor.",
+        "input_tokens": 1397,
+        "output_tokens": 125,
+        "cost_usd": 0.0002022,
+        "statement": "Consent may be reasonably withheld if the acquirer (or any parent, Affiliate or entity under common control) is a Direct Competitor of TerraNode in cloud infrastructure services; Affiliates' revenue and portfolio companies may be considered."
+      },
+      {
+        "case_id": "terranode_competitor",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "partial",
+        "reason": "The passage defines Direct Competitor as a Person deriving more than fifteen percent of annual gross revenue from cloud infrastructure, cloud hosting, managed cloud, or substantially similar services, but the claim's 'or similar services' is broader than the text's 'substantially similar services in the cloud infrastructure services market', and the passage also adds a revenue-measurement rule that the claim omits.",
+        "input_tokens": 991,
+        "output_tokens": 147,
+        "cost_usd": 0.00017260000000000002,
+        "statement": "Direct Competitor means a Person deriving more than 15% of annual gross revenue from cloud infrastructure, hosting, managed cloud or similar services."
+      },
+      {
+        "case_id": "terranode_competitor",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "supported",
+        "reason": "Section 5.5 and Section 9.3 together state that the non-assigning party may terminate on 30 days' written notice specifying the Article 9 violation, that termination does not take effect if the assigning party obtains the required Section 9.1 consent within 60 days after receipt of the notice, and that otherwise it takes effect upon expiry of the cure period.",
+        "input_tokens": 1173,
+        "output_tokens": 242,
+        "cost_usd": 0.00023830000000000002,
+        "statement": "If a party assigns or purports to assign in violation of Article 9, the non-assigning party may terminate on 30 days' written notice specifying the violation, but termination is not effective if the assigning party cures by obtaining the required consent within 60 days after receipt of the notice; otherwise it becomes effective at expiry of the cure period."
+      },
+      {
+        "case_id": "terranode_competitor",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "partial",
+        "reason": "Section 9.4 supports the 45-day advance written notice, the identification of the acquirer and its cloud-market Affiliates, the 30-day response window, and that silence is not consent, but it applies to 'each Party' reciprocally rather than specifically to Aldersgate and TerraNode, and the 30-day response runs from receipt of a complete notice.",
+        "input_tokens": 871,
+        "output_tokens": 132,
+        "cost_usd": 0.00015310000000000004,
+        "statement": "Aldersgate must give TerraNode written notice at least 45 days before closing, identifying the acquirer and its cloud-market Affiliates; TerraNode has 30 days to respond and silence is not consent."
+      },
+      {
+        "case_id": "terranode_competitor",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "supported",
+        "reason": "Section 9.5 permits assignment to an Affiliate without consent on at least fifteen days' prior written notice, requires written assumption by the assignee, keeps the assigning party jointly and severally liable, and deems loss of Affiliate status a new assignment requiring consent under Section 9.1.",
+        "input_tokens": 839,
+        "output_tokens": 113,
+        "cost_usd": 0.0001404,
+        "statement": "Assignment to an Affiliate without consent is allowed on 15 days' notice with assumption and joint liability, but later loss of Affiliate status is a new assignment needing consent."
+      },
+      {
+        "case_id": "terranode_competitor",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "supported",
+        "reason": "Section 5.6(a) states that upon termination for any reason the Provider shall provide transition assistance for up to 120 days at its then-current standard rates, which matches the claim's rule, number, and condition.",
+        "input_tokens": 818,
+        "output_tokens": 82,
+        "cost_usd": 0.0001228,
+        "statement": "If TerraNode terminates, transition assistance is available for up to 120 days at standard rates."
+      },
+      {
+        "case_id": "pinnacle_licensee",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [
+            "100"
+          ],
+          "missing_section_refs": [],
+          "flagged": true
+        },
+        "verdict": "supported",
+        "reason": "Section 1.8 defines Change of Control as a transaction, including a stock purchase, resulting in a Person or group acquiring more than 50% of a Party's outstanding voting securities, which directly covers a 100% stock purchase of the Licensee.",
+        "input_tokens": 614,
+        "output_tokens": 98,
+        "cost_usd": 0.0001104,
+        "statement": "Change of Control means a Person or group acquiring more than 50% of a Party's outstanding voting securities, so a 100% stock purchase of the Licensee would qualify."
+      },
+      {
+        "case_id": "pinnacle_licensee",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [
+            "2.2"
+          ],
+          "missing_section_refs": [],
+          "flagged": true
+        },
+        "verdict": "supported",
+        "reason": "Section 14.1 states that exclusivity under Sections 2.1 and 2.2 automatically converts to non-exclusive upon consummation of a Licensee Change of Control unless Licensor gives prior written consent, that consent is in its sole and absolute discretion, and that no affirmative action by Licensor is required.",
+        "input_tokens": 845,
+        "output_tokens": 120,
+        "cost_usd": 0.0001445,
+        "statement": "Exclusivity under Sections 2.1 and 2.2 automatically converts to non-exclusive upon consummation of a Licensee Change of Control unless Licensor gave prior written consent. Consent is in Licensor's sole and absolute discretion, and no action is required for conversion."
+      },
+      {
+        "case_id": "pinnacle_licensee",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "supported",
+        "reason": "Section 14.2(a)-(d) states that Licensee keeps a non-exclusive, non-transferable Field of Use license for the rest of the Term, that the Section 4.3-adjusted Annual License Fee stays unchanged and fully payable, that Licensor may license third parties without restriction, and that Derivative Works rights are not affected by the conversion.",
+        "input_tokens": 1701,
+        "output_tokens": 462,
+        "cost_usd": 0.00040110000000000005,
+        "statement": "After conversion, Licensee keeps a non-exclusive, non-transferable license in the Field of Use for the rest of the Term. The Annual License Fee, as adjusted, is unchanged and fully payable. Licensor may license third parties freely, and Licensee's Derivative Works rights are unaffected."
+      },
+      {
+        "case_id": "pinnacle_licensee",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "partial",
+        "reason": "Section 14.5 supports the no-termination-right, the Article 4 payment obligations remaining in force, and the conversion as the sole consequence, but it qualifies the sole consequence by an exception where Licensor consents to maintained exclusivity, which the claim omits and states as absolute.",
+        "input_tokens": 720,
+        "output_tokens": 110,
+        "cost_usd": 0.000127,
+        "statement": "A Licensee Change of Control gives neither party a termination right. The sole consequence is the conversion, and all other terms including Article 4 payment obligations remain in force."
+      },
+      {
+        "case_id": "pinnacle_licensee",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "supported",
+        "reason": "Section 14.3 requires written notice at least 45 days before consummation with transaction details and makes untimely notice a material breach, and Section 14.4 requires a concurrent consent request for maintaining exclusivity, a 30-day Licensor response period, and deemed withholding of consent on silence.",
+        "input_tokens": 1005,
+        "output_tokens": 112,
+        "cost_usd": 0.0001565,
+        "statement": "Licensee must give at least 45 days' prior written notice of an anticipated Change of Control with transaction details. Failure is a material breach. A consent request to keep exclusivity must accompany that notice. Licensor has 30 days to respond, and silence is deemed refusal."
+      },
+      {
+        "case_id": "pinnacle_licensee",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "supported",
+        "reason": "Section 12.3 provides termination for material breach on sixty days' written notice with cure, including non-payment within thirty days of notice deemed material breach, and Section 12.4 provides termination for insolvency, so every element of the claim is stated.",
+        "input_tokens": 910,
+        "output_tokens": 94,
+        "cost_usd": 0.000138,
+        "statement": "Termination remains available on independent grounds: material breach with 60 days' notice and cure (including non-payment after 30 days' notice), and insolvency."
+      },
+      {
+        "case_id": "pinnacle_licensee",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "supported",
+        "reason": "Section 14.6 states a Change of Control of Licensor does not trigger the Section 14.1 automatic conversion or any termination or modification right, and Section 13.2 permits assignment to a successor entity without consent while making it subject to Article 14.",
+        "input_tokens": 978,
+        "output_tokens": 97,
+        "cost_usd": 0.0001463,
+        "statement": "A Change of Control of the Licensor does not trigger conversion or any termination or modification right. Assignment to a successor is permitted without consent but remains subject to Article 14."
+      },
+      {
+        "case_id": "continental_acceleration",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "supported",
+        "reason": "Section 7.09(a) expressly states a Change of Control is an immediate and automatic Event of Default without notice from the Administrative Agent or any Lender, without passage of time, and without any cure period, which matches the claim.",
+        "input_tokens": 1405,
+        "output_tokens": 88,
+        "cost_usd": 0.0001845,
+        "statement": "A Change of Control is an immediate and automatic Event of Default, with no notice from the Agent or Lenders, no passage of time and no cure period."
+      },
+      {
+        "case_id": "continental_acceleration",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "supported",
+        "reason": "Section 7.09(b) states that upon a Change of Control all outstanding Obligations become immediately due and payable and Commitments automatically terminate, with no election, declaration, notice or other action required by the Agent or any Lender, and Section 2.05(a) corroborates the automatic acceleration and termination without further action or notice.",
+        "input_tokens": 1280,
+        "output_tokens": 122,
+        "cost_usd": 0.000189,
+        "statement": "On a Change of Control, all Obligations become immediately due and payable and Commitments terminate automatically, without any election, declaration, notice or other action by the Agent or any Lender."
+      },
+      {
+        "case_id": "continental_acceleration",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "partial",
+        "reason": "The passage confirms that for §7.09 defaults acceleration and commitment termination are automatic under §7.09(b) without any Agent declaration or Required Lender direction, but it does not expressly say the §8.01 mechanic 'does not apply' to §7.09 defaults in full, and §7.09(b) itself is not quoted in the passages provided.",
+        "input_tokens": 938,
+        "output_tokens": 131,
+        "cost_usd": 0.00015930000000000002,
+        "statement": "The §8.01 declaration/Required Lender direction mechanic does not apply to §7.09 defaults; acceleration is automatic under §7.09(b)."
+      },
+      {
+        "case_id": "continental_acceleration",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "supported",
+        "reason": "The Section 1.01 Change of Control definition in passages E2 and E9 lists exactly three limbs: over 35% beneficial ownership of voting Equity Interests, a merger where pre-deal holders keep no more than 65% (i.e., they must hold more than 65% to avoid it), and a sale of all or substantially all assets to anyone other than a wholly-owned Subsidiary; the passages contain no permitted-holder exclusion.",
+        "input_tokens": 2697,
+        "output_tokens": 162,
+        "cost_usd": 0.0003507,
+        "statement": "The Change of Control definition has three limbs: more than 35% beneficial ownership of voting equity; a merger in which pre-deal holders keep 65% or less; or a sale of all or substantially all assets to anyone other than a wholly-owned Subsidiary. The retrieved text shows no permitted-holder exclusion."
+      },
+      {
+        "case_id": "continental_acceleration",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "partial",
+        "reason": "The passages support that failing to deliver the §7.09(c) notice is a separate and independent Event of Default, but they do not state that the notices do not delay acceleration or create a cure period, and §7.09(b) (the acceleration provision) is not included.",
+        "input_tokens": 1424,
+        "output_tokens": 324,
+        "cost_usd": 0.00030439999999999997,
+        "statement": "The 30-day advance notice (§7.09(c)) and the 5-Business-Day notice (§5.01(g)) do not delay acceleration or create a cure period. Failing to give the §7.09(c) notice is a separate Event of Default."
+      },
+      {
+        "case_id": "continental_acceleration",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "supported",
+        "reason": "Section 2.05(c) states that the 2.0% Make-Whole Amount applies to a prepayment resulting from acceleration upon a Change of Control regardless of timing, 'provided that the date of such Change of Control occurs prior to the Prepayment Premium Expiration Date,' and Section 1.01 defines that date as November 1, 2025.",
+        "input_tokens": 1741,
+        "output_tokens": 546,
+        "cost_usd": 0.0004471,
+        "statement": "The 2.0% Make-Whole Amount applies to prepayment on a Change of Control acceleration only if the Change of Control date is before the Prepayment Premium Expiration Date (November 1, 2025)."
+      },
+      {
+        "case_id": "continental_acceleration",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "supported",
+        "reason": "Section 10.10 states that waiver of any Event of Default arising under Section 7.09 requires written consent of all Lenders, and the Required Lenders definition confirms the contrast with the lower threshold.",
+        "input_tokens": 1466,
+        "output_tokens": 83,
+        "cost_usd": 0.0001881,
+        "statement": "Waiving a §7.09 Event of Default requires written consent of all Lenders, not just Required Lenders."
+      },
+      {
+        "case_id": "terranode_notice_affiliate",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "supported",
+        "reason": "Section 9.1 states that assignment in connection with a change of control requires prior written consent not to be unreasonably withheld, conditioned, or delayed, and that any non-compliant purported assignment is null and void.",
+        "input_tokens": 813,
+        "output_tokens": 84,
+        "cost_usd": 0.00012330000000000002,
+        "statement": "A change of control is treated as an assignment requiring prior written consent, not to be unreasonably withheld, conditioned or delayed; non-compliant assignment is void."
+      },
+      {
+        "case_id": "terranode_notice_affiliate",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "partial",
+        "reason": "Section 9.2 and the Direct Competitor definition support withholding consent on a reasonable basis when the acquirer or its Affiliates is a Direct Competitor defined by more than 15% of annual gross revenue from cloud infrastructure services, but the passages also add cloud hosting and managed cloud services to the definition, and the claim's parenthetical omits that breadth while the 15% threshold and Affiliate reach are supported.",
+        "input_tokens": 2017,
+        "output_tokens": 158,
+        "cost_usd": 0.00028070000000000005,
+        "statement": "Consent may be reasonably withheld if the acquirer or its Affiliates is a Direct Competitor (more than 15% of revenue from cloud infrastructure services)."
+      },
+      {
+        "case_id": "terranode_notice_affiliate",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "supported",
+        "reason": "Section 9.4 requires written notice at least 45 days before the anticipated closing for a proposed change of control, requires a written response within 30 days of a complete notice, and states that failure to respond is not deemed consent.",
+        "input_tokens": 857,
+        "output_tokens": 85,
+        "cost_usd": 0.0001282,
+        "statement": "Written notice is required at least 45 days before closing for a proposed change of control; the counterparty must respond within 30 days of a complete notice, and failure to respond is not consent."
+      },
+      {
+        "case_id": "terranode_notice_affiliate",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "partial",
+        "reason": "Section 9.5 supports the no-consent assignment to an Affiliate, 15 days' prior written notice, written assumption, joint and several liability, and that ceasing to be an Affiliate is a new assignment requiring consent under Section 9.1; however, the passages do not establish the claim's implicit scope of who holds the rights, and the claim's 'requires consent' for the new assignment is stated in the clause, so the gap is minor but the claim is otherwise fully stated.",
+        "input_tokens": 1498,
+        "output_tokens": 171,
+        "cost_usd": 0.0002353,
+        "statement": "Assignment to an Affiliate needs no consent but requires 15 days' prior written notice, written assumption, and continuing joint and several liability; ceasing to be an Affiliate is a new assignment requiring consent."
+      },
+      {
+        "case_id": "terranode_notice_affiliate",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "supported",
+        "reason": "Section 5.5 and Section 9.3 together state that a violation of Article 9 lets the non-assigning Party terminate on 30 days' notice, and that termination does not take effect if the assigning Party obtains the required consent under Section 9.1 within a 60-day cure period after receipt of the termination notice.",
+        "input_tokens": 1109,
+        "output_tokens": 117,
+        "cost_usd": 0.0001694,
+        "statement": "Violating Article 9 allows termination on 30 days' notice, avoidable by obtaining consent within a 60-day cure period."
+      },
+      {
+        "case_id": "terranode_notice_affiliate",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "partial",
+        "reason": "The passages support writing, personal delivery, overnight courier, and certified mail, and addressing to TerraNode's General Counsel for Provider notices, but they omit that the claim's delivery methods are conditional/deemed-given rules and the claim overstates the requirement since certified mail is also permitted and notice addresses can be changed by designation.",
+        "input_tokens": 922,
+        "output_tokens": 126,
+        "cost_usd": 0.00015519999999999998,
+        "statement": "Notices must be in writing and delivered by personal delivery, overnight courier or certified mail, addressed to the General Counsel of TerraNode."
+      },
+      {
+        "case_id": "terranode_notice_affiliate",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "partial",
+        "reason": "The memo states that the TerraNode ISA's language refers to assignment 'by operation of law or in connection with a change of control' with no specific percentage threshold, and it says generally that all eight definitions are clearly triggered by the 100% acquisition, but it does not specifically state that the TerraNode ISA is triggered by the 100% equity acquisition, and the TerraNode trigger is described only as a general restriction without a stated threshold.",
+        "input_tokens": 1282,
+        "output_tokens": 157,
+        "cost_usd": 0.0002067,
+        "statement": "The deal memo says the TerraNode ISA is triggered by the proposed 100% equity acquisition."
+      },
+      {
+        "case_id": "pinnacle_licensor",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "supported",
+        "reason": "Section 14.6 expressly states the agreement including exclusivity (if then in effect) continues, the successor is bound by Licensor's obligations, a Change of Control does not trigger the Section 14.1 automatic conversion, and it gives no termination or modification right to either Party, with Section 1.8 defining Change of Control.",
+        "input_tokens": 1104,
+        "output_tokens": 123,
+        "cost_usd": 0.0001719,
+        "statement": "Section 14.6 provides that on a Change of Control of Licensor the Agreement, including exclusivity (if then in effect), continues in full force, the successor or acquirer is bound by Licensor's obligations, the Section 14.1 automatic conversion is not triggered, and there is no termination or modification right for either Party."
+      },
+      {
+        "case_id": "pinnacle_licensor",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "supported",
+        "reason": "Section 1.8 defines Change of Control as any transaction resulting in a Person or group acquiring more than 50% of a Party's outstanding voting securities, which directly covers an acquisition of Pinnacle at that level.",
+        "input_tokens": 628,
+        "output_tokens": 89,
+        "cost_usd": 0.0001073,
+        "statement": "Change of Control is defined as a transaction resulting in a Person or group acquiring more than 50% of the outstanding voting securities of a Party, so an acquisition of Pinnacle at that level would meet the definition."
+      },
+      {
+        "case_id": "pinnacle_licensor",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [
+            "1",
+            "14.2",
+            "14.4"
+          ],
+          "missing_section_refs": [],
+          "flagged": true
+        },
+        "verdict": "partial",
+        "reason": "The passages confirm that Sections 14.1, 14.2, 14.4, and 14.5 are framed around a Change of Control of Licensee and that 14.3 imposes notice duties on Licensee, but none of the passages expressly state that these provisions do not apply to a Licensor change of control, nor do they address Licensor change of control at all, so that conclusion is only inferred.",
+        "input_tokens": 1906,
+        "output_tokens": 139,
+        "cost_usd": 0.00026010000000000003,
+        "statement": "The conversion mechanics (Sections 14.1, 14.2, 14.4) and the no-termination clause (Section 14.5) are expressed in terms of a Change of Control of Licensee, so they do not apply to a Licensor change of control. The Licensee notice duty in Section 14.3 is likewise not triggered by one."
+      },
+      {
+        "case_id": "pinnacle_licensor",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "supported",
+        "reason": "Section 13.2 expressly permits assignment without consent in a merger or sale of all or substantially all assets, subject to Article 14, a written assumption by the assignee, and written notice within fifteen days, and it applies 'notwithstanding Section 13.1', so the consent requirement does not block such a transaction.",
+        "input_tokens": 1028,
+        "output_tokens": 117,
+        "cost_usd": 0.00016130000000000002,
+        "statement": "Assignment in a merger or sale of substantially all assets is permitted without consent, subject to Article 14, a written assumption and notice within 15 days. Section 13.1 consent therefore does not block such a transaction."
+      },
+      {
+        "case_id": "pinnacle_licensor",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "partial",
+        "reason": "The passages support the 60-day cure termination right for material breach and the insolvency termination right, both tied to breach or insolvency events, but they say nothing about change of control, so the claim's statement that these rights remain available 'not on the change of control itself' is only implied by silence rather than stated.",
+        "input_tokens": 910,
+        "output_tokens": 107,
+        "cost_usd": 0.0001445,
+        "statement": "Termination rights for material breach (60-day cure) and insolvency remain available but depend on an actual breach or insolvency event, not on the change of control itself."
+      },
+      {
+        "case_id": "pinnacle_licensor",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [
+            "14.6"
+          ],
+          "flagged": true
+        },
+        "verdict": "supported",
+        "reason": "Section 16.2 requires any amendment to be a written instrument executed by authorized representatives of both Parties that expressly references the Agreement, which covers changes to Section 14.6, and the passages contain no such amendment.",
+        "input_tokens": 802,
+        "output_tokens": 412,
+        "cost_usd": 0.00028619999999999996,
+        "statement": "Amendments must be in a signed writing that expressly references the Agreement, so any change to Section 14.6 would require such an instrument. None appears in the retrieved evidence."
+      },
+      {
+        "case_id": "continental_make_whole",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "supported",
+        "reason": "The passages state all three Change of Control prongs: over 35% of voting Equity Interests acquired (clause (a)), a merger where pre-deal holders do not continue to hold more than 65% of the surviving entity's voting Equity Interests (clause (b)), and a sale of all or substantially all assets to a Person other than a wholly-owned Subsidiary (clause (c)), with no carve-out appearing in the definition text, though the omitted tail of Section 1.01 is not visible in the passages.",
+        "input_tokens": 2078,
+        "output_tokens": 572,
+        "cost_usd": 0.0004938,
+        "statement": "Change of Control means any of three events: acquisition of more than 35% of voting Equity Interests; a merger or consolidation in which pre-deal holders do not keep more than 65% of the surviving entity; or a sale of all or substantially all assets to a non-wholly-owned-Subsidiary Person. No carve-out appears in the retrieved text of the definition, although the definition is split across excerpts and the tail of Section 1.01 is marked omitted."
+      },
+      {
+        "case_id": "continental_make_whole",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "supported",
+        "reason": "Section 2.05(a) states that on a Change of Control all Obligations become due, Commitments automatically terminate, and the Borrower must prepay all Loans in full on that date (or next Business Day) with accrued interest, fees, other amounts and any applicable Make-Whole Amount, and that the prepayment is mandatory and unconditional.",
+        "input_tokens": 1841,
+        "output_tokens": 128,
+        "cost_usd": 0.0002481,
+        "statement": "On a Change of Control all Obligations immediately become due and Commitments terminate. The Borrower must prepay all Loans in full on that date (or the next Business Day) with accrued interest, fees, other amounts and any applicable Make-Whole Amount. The prepayment is mandatory and unconditional."
+      },
+      {
+        "case_id": "continental_make_whole",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "supported",
+        "reason": "Section 7.09(a) states a Change of Control is an immediate and automatic Event of Default with no notice, passage of time, or cure period, and Section 7.09(b) and 8.01 state acceleration is automatic without declaration or Required Lender direction.",
+        "input_tokens": 1608,
+        "output_tokens": 100,
+        "cost_usd": 0.0002108,
+        "statement": "A Change of Control is an immediate, automatic Event of Default with no notice, passage of time or cure. Acceleration is automatic and needs no declaration or Required Lender direction."
+      },
+      {
+        "case_id": "continental_make_whole",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "supported",
+        "reason": "Section 2.05(c) states the Make-Whole Amount is 2.0% of the principal prepaid, due on the prepayment date, part of the secured Obligations, and applies to Change of Control and other prepayments before the Prepayment Premium Expiration Date, including those following Event of Default acceleration, with the Expiration Date defined in Section 1.01.",
+        "input_tokens": 2479,
+        "output_tokens": 134,
+        "cost_usd": 0.00031489999999999996,
+        "statement": "The Make-Whole Amount is 2.0% of the aggregate principal prepaid. It is payable on the prepayment date, is secured, and applies to Change of Control prepayments and other prepayments before the Prepayment Premium Expiration Date, including those after an Event of Default acceleration."
+      },
+      {
+        "case_id": "continental_make_whole",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "supported",
+        "reason": "Section 2.05(c) excludes prepayments on or after the Prepayment Premium Expiration Date (defined in 1.01 as November 1, 2025) and scheduled Section 2.03 amortization, and applies the premium to Change of Control accelerations regardless of acceleration timing if the Change of Control date precedes that expiration date.",
+        "input_tokens": 1763,
+        "output_tokens": 319,
+        "cost_usd": 0.00033580000000000003,
+        "statement": "The premium does not apply to prepayments on or after November 1, 2025 or to scheduled Section 2.03 amortization. For a Change of Control acceleration, the premium applies regardless of when the acceleration occurs, provided the Change of Control date is before November 1, 2025."
+      },
+      {
+        "case_id": "continental_make_whole",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "supported",
+        "reason": "Section 10.10 requires written consent of all Lenders to amend or waive any provision of Section 7.09, Section 7.09(c) requires notice at least 30 days before consummation and states that delivering the notice is not a consent or waiver request, and failure to deliver is a separate and independent Event of Default.",
+        "input_tokens": 1569,
+        "output_tokens": 283,
+        "cost_usd": 0.0002984,
+        "statement": "Waiver of Section 7.09 requires written consent of all Lenders. Delivering the Change of Control Notice is not a consent or waiver request. The Borrower must give written notice at least 30 days before consummation, and failure is a separate Event of Default."
+      },
+      {
+        "case_id": "wellstone_options",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "supported",
+        "reason": "Section 11.1 grants the other party a right to terminate on sixty days' written notice delivered within ninety days of the effective date of a Change of Control, and Section 1.1 defines Change of Control as a transfer of more than 50% of voting equity to a single acquirer or group acting in concert.",
+        "input_tokens": 1410,
+        "output_tokens": 111,
+        "cost_usd": 0.0001965,
+        "statement": "The non-affected party may terminate on 60 days' written notice delivered within 90 days of the effective date of the other party's Change of Control."
+      },
+      {
+        "case_id": "wellstone_options",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "supported",
+        "reason": "Section 11.2 states that in lieu of termination under Section 11.1, the non-affected party may elect a 60-day good-faith renegotiation of pricing and volume commitments after notice of the Change of Control, and if no agreement is reached it may terminate on 30 days' written notice.",
+        "input_tokens": 721,
+        "output_tokens": 109,
+        "cost_usd": 0.00012660000000000001,
+        "statement": "In lieu of termination, the non-affected party may elect a 60-day good-faith renegotiation of pricing and volume commitments following notice of the Change of Control; failing agreement, it may thereafter terminate on 30 days' written notice."
+      },
+      {
+        "case_id": "wellstone_options",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "supported",
+        "reason": "Section 11.3 requires each party to give written notice of an anticipated Change of Control within fifteen days after public announcement or signing of a definitive agreement, including a reasonably detailed description, acquirer identity, and anticipated closing date, to the extent not restricted by confidentiality obligations.",
+        "input_tokens": 730,
+        "output_tokens": 112,
+        "cost_usd": 0.000129,
+        "statement": "Each party must give written notice of an anticipated Change of Control within 15 days after public announcement or signing of a definitive agreement, with transaction description, acquirer identity and anticipated closing date, subject to confidentiality restrictions."
+      },
+      {
+        "case_id": "wellstone_options",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "partial",
+        "reason": "E1 supports the Change of Control definition (more than 50% of voting equity to a single acquirer or group acting in concert) and that the definition has no affiliate carve-out, and E17 shows §15.8 is an assignment provision; however, the passages do not expressly state that §15.8 is 'not a change-of-control exception' and the claim's characterization that no carve-out exists is an inference from the absence of one rather than an explicit statement.",
+        "input_tokens": 1445,
+        "output_tokens": 157,
+        "cost_usd": 0.000223,
+        "statement": "Change of Control is defined as a transfer of more than 50% of voting equity to a single acquirer or group of related acquirers acting in concert; the definition contains no affiliate carve-out, and §15.8 is an assignment provision, not a change-of-control exception."
+      },
+      {
+        "case_id": "wellstone_options",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "partial",
+        "reason": "Section 15.2 requires amendments, modifications, supplements, or waivers to be in writing and signed by authorized representatives of both parties, which supports the claim, but the claim's 'signed writing' rule is broader than the text's 'in writing and signed by duly authorized representatives of both parties' only in phrasing, so the core requirement is directly stated and the claim is essentially supported.",
+        "input_tokens": 599,
+        "output_tokens": 141,
+        "cost_usd": 0.0001304,
+        "statement": "Any modification of these terms requires a signed writing."
+      },
+      {
+        "case_id": "meridian_competitor",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "partial",
+        "reason": "The Change of Control definition (more than 50% equity/voting power or sale of substantially all assets) and its deemed-assignment consent requirement under Section 8.1 are stated in Section 8.2, not 8.1, so the claim attributes the rule to the wrong clause, though Section 8.1 supports the prior written consent requirement for assignments.",
+        "input_tokens": 1555,
+        "output_tokens": 129,
+        "cost_usd": 0.00022,
+        "statement": "A Change of Control (more than 50% of equity/voting power, or sale of substantially all assets) is deemed an assignment requiring Licensor's prior written consent under §8.1."
+      },
+      {
+        "case_id": "meridian_competitor",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [
+            "1"
+          ],
+          "missing_section_refs": [],
+          "flagged": true
+        },
+        "verdict": "supported",
+        "reason": "Section 8.5 states that consent is in Licensor's sole and absolute discretion, that Licensor has no obligation to consent, that conditions such as a royalty increase, financial assurances, scope/Territory modifications, or other amendments may be imposed, and that consent to one assignment is not consent to any subsequent assignment.",
+        "input_tokens": 804,
+        "output_tokens": 122,
+        "cost_usd": 0.0001414,
+        "statement": "Consent is in Licensor's sole and absolute discretion; Licensor has no obligation to consent and may impose conditions (royalty increase, financial assurances, scope/Territory changes, other amendments). Consent to one transaction does not extend to later ones."
+      },
+      {
+        "case_id": "meridian_competitor",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "supported",
+        "reason": "Section 8.1 states that assignment or transfer by operation of law or otherwise without Licensor's prior express written consent is prohibited and that any attempted transfer in violation is null and void, matching the claim.",
+        "input_tokens": 651,
+        "output_tokens": 83,
+        "cost_usd": 0.0001066,
+        "statement": "Assignment or transfer without prior express written consent, including by operation of law, is null and void."
+      },
+      {
+        "case_id": "meridian_competitor",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "supported",
+        "reason": "Section 8.4 states Licensee must promptly notify Licensor in writing of anticipated Change of Control, no later than fifteen business days before expected closing, with a description of the transaction and identity of the acquiring party, matching every element of the claim.",
+        "input_tokens": 1055,
+        "output_tokens": 96,
+        "cost_usd": 0.0001535,
+        "statement": "Licensee must notify Licensor in writing of an anticipated Change of Control promptly and no later than 15 business days before expected closing, describing the deal and identifying the acquirer."
+      },
+      {
+        "case_id": "meridian_competitor",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "supported",
+        "reason": "Section 8.3 (E5) states that notwithstanding anything herein to the contrary, Licensor may terminate immediately on written notice if Licensee is acquired by, merges with, or comes under common control with an entity that directly competes with Licensor in developing, manufacturing, or selling flavor systems, ingredients, or formulations, matching every element of the claim.",
+        "input_tokens": 1112,
+        "output_tokens": 134,
+        "cost_usd": 0.0001782,
+        "statement": "Additional termination right: notwithstanding anything to the contrary, Licensor may terminate immediately on written notice if Licensee is acquired by, merges with, or comes under common control with an entity that directly competes with Licensor in developing, manufacturing or selling flavor systems, ingredients or formulations."
+      },
+      {
+        "case_id": "meridian_competitor",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "supported",
+        "reason": "Section 11.3 states termination is immediate upon written notice, no cure period applies, and it is without limiting 11.1, whose general breach termination provides a thirty (30) day cure period.",
+        "input_tokens": 922,
+        "output_tokens": 77,
+        "cost_usd": 0.00013069999999999998,
+        "statement": "§11.3 confirms the competitor termination right is immediate and that no cure period applies, unlike the 30-day cure in the general breach termination under §11.1."
+      },
+      {
+        "case_id": "meridian_competitor",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "supported",
+        "reason": "Section 13.4 states that a waiver is effective only if in writing and signed by the granting Party, and that failure to exercise or enforce a right does not operate as a waiver.",
+        "input_tokens": 651,
+        "output_tokens": 72,
+        "cost_usd": 0.0001011,
+        "statement": "Any waiver must be in a signed writing; failure to enforce is not a waiver."
+      },
+      {
+        "case_id": "novabridge_silence_pricing",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "supported",
+        "reason": "Section 12.2 gives the non-undergoing party a right to terminate on 90 days' written notice, lapses it if at least 30 days' prior notice is given and no written objection is delivered within the 30-day period, and requires the notice to describe the transaction, identify the acquirer, state the form, and give the expected closing date, with Section 12.1 defining Change of Control.",
+        "input_tokens": 1300,
+        "output_tokens": 136,
+        "cost_usd": 0.000198,
+        "statement": "A Change of Control gives the other party a right to terminate on 90 days' notice. The right lapses for that transaction if the undergoing party gave at least 30 days' prior written notice and no written objection was delivered within the 30-day period. The notice must describe the transaction, identify the acquirer, state the form of transaction and give the expected closing date."
+      },
+      {
+        "case_id": "novabridge_silence_pricing",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "supported",
+        "reason": "Section 12.2 requires any written objection to be delivered per Section 18.1, which lists personal delivery, tracked overnight courier, or certified mail, allows email only if a hard copy follows within two Business Days, and makes notice effective upon receipt.",
+        "input_tokens": 2203,
+        "output_tokens": 370,
+        "cost_usd": 0.0004053,
+        "statement": "Any objection must be delivered under §18.1 by personal delivery, tracked overnight courier or certified mail. Email counts only if a hard copy follows within 2 Business Days. Notice is effective on receipt."
+      },
+      {
+        "case_id": "novabridge_silence_pricing",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "partial",
+        "reason": "The passages support that §18.3 requires a written instrument executed by both parties for waivers and that §12.2 lapses the termination right if no written objection is delivered within 30 days, but neither passage addresses how §12.2's lapse relates to §18.3, so the claimed independence conclusion is not stated or directly implied.",
+        "input_tokens": 1299,
+        "output_tokens": 428,
+        "cost_usd": 0.00034389999999999996,
+        "statement": "§18.3 requires waivers to be in a writing signed by both parties. That gives room to argue that silence is not an effective waiver. §12.2 is, however, an express lapse mechanism, so the better reading is that it operates independently of §18.3. This remains an interpretive risk."
+      },
+      {
+        "case_id": "novabridge_silence_pricing",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "supported",
+        "reason": "Section 12.3 states that on a Change of Control of Buyer, where the acquirer or its ultimate parent has over $1 billion in annual revenue, pricing resets at closing to the lower of current pricing and the Published Wholesale Schedule, applies for the rest of the Term including Renewal Terms, does not affect the Minimum Purchase Commitment, and applies notwithstanding the Agreement.",
+        "input_tokens": 1624,
+        "output_tokens": 542,
+        "cost_usd": 0.00043339999999999996,
+        "statement": "If Solara is acquired by an entity whose revenue exceeds $1 billion, pricing resets at closing to the lower of current contract pricing and the Published Wholesale Schedule. This applies for the remainder of the Term, including Renewal Terms, and does not affect the Minimum Purchase Commitment. The clause applies notwithstanding anything to the contrary in the Agreement."
+      },
+      {
+        "case_id": "novabridge_silence_pricing",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "partial",
+        "reason": "The passages support the most-recent-audited-financials-at-signing rule, the independent registered accounting firm certification for private acquirers, and NovaBridge's right to request reasonable documentation, but they state the revenue test is a $1 billion threshold tied to a Change of Control of Buyer and the documentation right is to verify revenue, while the claim omits the threshold and the claim's wording that the test 'uses' financials is consistent; the claim is otherwise accurate but incomplete regarding the threshold, so it is only partially supported as a full description.",
+        "input_tokens": 1148,
+        "output_tokens": 193,
+        "cost_usd": 0.0002113,
+        "statement": "The revenue test uses the most recent audited financials available when the definitive agreement is signed. A private acquirer must use statements certified by an independent registered accounting firm. NovaBridge may request reasonable documentation from Solara to verify revenue."
+      },
+      {
+        "case_id": "novabridge_silence_pricing",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [
+            "13.1"
+          ],
+          "missing_section_refs": [],
+          "flagged": true
+        },
+        "verdict": "partial",
+        "reason": "Section 13.1 covers material breach with a 60-day cure period, but the passages do not state that 13.1 excludes change-of-control termination, and the claim that §12.2 has no cure mechanism is only implied by its lack of a cure provision, while §12.2 instead contains a deemed-consent/objection mechanism that the claim does not mention.",
+        "input_tokens": 1407,
+        "output_tokens": 129,
+        "cost_usd": 0.00020520000000000003,
+        "statement": "The 13.1 cure period applies to material breach, not to change-of-control termination. §12.2 has no cure mechanism."
+      },
+      {
+        "case_id": "novabridge_silence_pricing",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "not_supported",
+        "reason": "The passages contain no statement that the partnership agreement is separate from another agreement or has a different change-of-control structure; they instead show the partnership agreement's own Section 11.1 change-of-control termination right and definitions, so the claim that it does not govern the question is unsupported.",
+        "input_tokens": 1606,
+        "output_tokens": 106,
+        "cost_usd": 0.00021360000000000001,
+        "statement": "The partnership agreement is a separate agreement with a different change-of-control structure, so it does not govern this question."
+      },
+      {
+        "case_id": "apex_msa_successor",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "supported",
+        "reason": "Section 16.1 permits assignment without consent to an Affiliate or a merger/asset-sale successor conditioned on written assumption of obligations, and expressly states it is subject to and does not limit Customer's Section 12.3 rights.",
+        "input_tokens": 844,
+        "output_tokens": 94,
+        "cost_usd": 0.0001314,
+        "statement": "Section 16.1 permits assignment without consent to an Affiliate or merger/asset-sale successor if the assignee assumes obligations in writing, but is expressly subject to and does not limit or modify Customer's Section 12.3 rights."
+      },
+      {
+        "case_id": "apex_msa_successor",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "supported",
+        "reason": "Section 12.3(a) states the 60-day prior written notice termination right exercisable within 120 days after receipt of Provider's notice, the 10-business-day post-consummation notification duty, and the deemed waiver for that event only (without prejudice to subsequent events).",
+        "input_tokens": 1284,
+        "output_tokens": 104,
+        "cost_usd": 0.0001804,
+        "statement": "Upon a Change of Control of Provider, Customer may terminate on 60 days' prior written notice, exercisable within 120 days after receipt of Provider's written notice; Provider must notify within 10 business days after consummation; failure to act within 120 days waives the right for that event only."
+      },
+      {
+        "case_id": "apex_msa_successor",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "partial",
+        "reason": "The passages define Change of Control as a >50% voting equity change or sale of all/substantially all assets, which supports the threshold, but they contain no termination clause triggered by Change of Control or assignment, and do not state that a merger counts only if it meets those tests.",
+        "input_tokens": 1235,
+        "output_tokens": 99,
+        "cost_usd": 0.000173,
+        "statement": "The termination right is triggered by a Change of Control as defined, not by assignment as such; a merger counts only if it produces a >50% voting equity change or sale of all/substantially all assets."
+      },
+      {
+        "case_id": "apex_msa_successor",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [
+            "12.3"
+          ],
+          "missing_section_refs": [],
+          "flagged": true
+        },
+        "verdict": "supported",
+        "reason": "Section 12.3(b) provides 12 months of Transition Services at no additional cost after termination under 12.3(a), and 12.3(c) states the Section 12.3 rights are in addition to and not in lieu of other termination rights such as 12.1 and 12.2.",
+        "input_tokens": 1477,
+        "output_tokens": 104,
+        "cost_usd": 0.00019970000000000003,
+        "statement": "If Customer terminates under 12.3(a), Provider must provide 12 months of Transition Services at no additional cost; the 12.3 rights are cumulative with other termination rights."
+      },
+      {
+        "case_id": "apex_msa_successor",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [
+            "12.3"
+          ],
+          "missing_section_refs": [],
+          "flagged": true
+        },
+        "verdict": "partial",
+        "reason": "Section 12.2 supports the 180-day notice and early termination fee for termination for convenience, but no passage on Section 12.3 is provided, so the claim that 12.3 has no fee is unsupported.",
+        "input_tokens": 754,
+        "output_tokens": 146,
+        "cost_usd": 0.0001484,
+        "statement": "Contrast: termination for convenience requires 180 days' notice and an early termination fee, whereas 12.3 has no fee."
+      },
+      {
+        "case_id": "apex_msa_successor",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [
+            "120",
+            "12.3",
+            "16.6"
+          ],
+          "missing_section_refs": [],
+          "flagged": true
+        },
+        "verdict": "partial",
+        "reason": "Section 16.6 supports the signed-writing requirement and that delay is not a waiver, but the passage provided contains nothing about 12.3(a) or a deemed waiver after a 120-day window, so that part of the claim is unsupported by the cited text.",
+        "input_tokens": 703,
+        "output_tokens": 99,
+        "cost_usd": 0.0001198,
+        "statement": "Any waiver of the right must be in a signed writing, and delay in exercising a right is not a waiver under 16.6, though 12.3(a) separately provides for deemed waiver after the 120-day window."
+      },
+      {
+        "case_id": "terraverde_recapture",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "supported",
+        "reason": "Section 22(a) defines Change of Control as a transfer of more than fifty percent of Tenant's ownership interests, in a single transaction or series of related transactions, in any form or structure, and states it is deemed an assignment for all purposes of Section 21 and Section 22.",
+        "input_tokens": 1263,
+        "output_tokens": 318,
+        "cost_usd": 0.0002853,
+        "statement": "A transfer of more than 50% of Tenant's ownership interests, in one or a series of related transactions and in any form or structure, is a deemed assignment (Change of Control) for Sections 21 and 22."
+      },
+      {
+        "case_id": "terraverde_recapture",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "supported",
+        "reason": "Section 21.1 requires Landlord's prior written consent not to be unreasonably withheld, conditioned, or delayed, and states that transfers by operation of law are deemed voluntary assignments requiring that consent, matching every element of the claim.",
+        "input_tokens": 1268,
+        "output_tokens": 96,
+        "cost_usd": 0.00017480000000000002,
+        "statement": "Section 21.1 requires Landlord's prior written consent to assignments, not to be unreasonably withheld, conditioned or delayed, and treats transfers by operation of law as voluntary assignments requiring consent."
+      },
+      {
+        "case_id": "terraverde_recapture",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "supported",
+        "reason": "Section 22(b) gives Landlord a recapture right exercisable within 30 days after receipt of the 22(d) notice, termination effective 180 days after exercise, Tenant continues paying Rent and performing during that period, and Tenant must surrender the Premises by the termination effective date.",
+        "input_tokens": 1277,
+        "output_tokens": 110,
+        "cost_usd": 0.0001827,
+        "statement": "Landlord has a recapture right exercisable within 30 days after receiving the §22(d) notice, with termination 180 days after exercise, during which Tenant continues to pay Rent and perform. Tenant must surrender the Premises by the termination date."
+      },
+      {
+        "case_id": "terraverde_recapture",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "supported",
+        "reason": "Section 22(c) states that if the 30-day recapture right is not exercised, consent is not to be unreasonably withheld, conditioned, or delayed, and Landlord may condition consent on an increased deposit of 12 months' Base Rent, a parent guaranty covering the remaining term including Renewal Terms, and demonstrated financial capability.",
+        "input_tokens": 2070,
+        "output_tokens": 394,
+        "cost_usd": 0.000404,
+        "statement": "If recapture is not exercised within the 30 days, consent is subject to a reasonableness standard, but Landlord may condition it on a 12-month Base Rent security deposit, a parent guaranty for the remaining term including renewals, and demonstrated financial capability."
+      },
+      {
+        "case_id": "terraverde_recapture",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "supported",
+        "reason": "Section 22(d) requires written notice at least 30 days before the anticipated effective date of a Change of Control deemed assignment, including transaction, acquirer identity and financial information with audited statements for two fiscal years, and states that failure to provide the notice and information within the required period is an Event of Default under Section 15.1.",
+        "input_tokens": 1390,
+        "output_tokens": 118,
+        "cost_usd": 0.000198,
+        "statement": "Tenant must give written notice at least 30 days before the anticipated effective date, with transaction, acquirer and financial information including two years of audited statements. Failure to give timely notice and information is an Event of Default under Section 15.1."
+      },
+      {
+        "case_id": "terraverde_recapture",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "supported",
+        "reason": "Section 21.4 states that a transfer in violation of Section 21 is void and an Event of Default under §15.1(d), §15.1(d) covers assignments or subleases in violation of Sections 21 or 22, and the passages contain no cure period for (d) while (b) has a 30-day cure extendable to 90 days.",
+        "input_tokens": 1329,
+        "output_tokens": 122,
+        "cost_usd": 0.0001939,
+        "statement": "A transfer in violation of Section 21 is void and an Event of Default under §15.1(d). §15.1(d) also covers purported assignments in violation of Section 22. No cure period is stated in the retrieved text for (d), whereas (b) has a 30-day cure, extendable up to 90 days."
+      },
+      {
+        "case_id": "terraverde_recapture",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "supported",
+        "reason": "E1 states the Section 21.2 affiliate exception permits assignment or sublease to affiliates without consent, conditioned on at least 15 days' prior written notice and a written assumption, and E2 (Section 22) does not mention Section 21.2 or say whether it applies to a change of control.",
+        "input_tokens": 2014,
+        "output_tokens": 406,
+        "cost_usd": 0.00040439999999999996,
+        "statement": "The Section 21.2 affiliate exception permits assignment or sublease to affiliates without consent on 15 days' notice and written assumption, but Section 22 as retrieved does not reference it. Whether it applies to a change of control is not stated."
+      },
+      {
+        "case_id": "terraverde_recapture",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [
+            "21.3",
+            "21.3(d)",
+            "22"
+          ],
+          "flagged": true
+        },
+        "verdict": "supported",
+        "reason": "Section 21.3 and its 21.3(d) 50% excess consideration payment expressly apply where consent is required under Section 21.1, and the passages contain no text addressing a Section 22 deemed assignment, so the claim's statement that this is not stated is accurate.",
+        "input_tokens": 1567,
+        "output_tokens": 346,
+        "cost_usd": 0.00032970000000000005,
+        "statement": "Section 21.3 conditions and the 50% excess consideration payment (§21.3(d)) apply to ordinary assignments and subleases requiring consent under §21.1. Whether they also apply to a deemed assignment under §22 is not stated in the retrieved text."
+      },
+      {
+        "case_id": "compare_competitor_remedies",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "supported",
+        "reason": "Section 8.3 gives Licensor the right to terminate immediately on written notice if Licensee is acquired by, merges with, or comes under common control with an entity directly competing in flavor systems, flavor ingredients, or flavor formulations, and Section 11.3 confirms the immediate termination without cure, so the claim's elements (rule, triggers, competitor scope) are stated, with the claim's 'ingredients or formulations' wording matching the flavor-related scope in 8.3.",
+        "input_tokens": 857,
+        "output_tokens": 175,
+        "cost_usd": 0.00017319999999999998,
+        "statement": "Meridian Licensor may terminate immediately on written notice if Licensee is acquired by, merges with, or comes under common control with a direct competitor in flavor systems, ingredients or formulations."
+      },
+      {
+        "case_id": "compare_competitor_remedies",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [
+            "8.3",
+            "11.1",
+            "11.3"
+          ],
+          "missing_section_refs": [],
+          "flagged": true
+        },
+        "verdict": "partial",
+        "reason": "Section 11.3 expressly says no cure period applies to termination under Section 8.3 and Section 11.1 sets a 30-day cure for material breach, but the passages do not state that 11.1 is a 'separate general-breach route' and do not mention 8.3 beyond the cross-reference, which is only partly supported.",
+        "input_tokens": 924,
+        "output_tokens": 120,
+        "cost_usd": 0.00015240000000000002,
+        "statement": "Meridian expressly provides that no cure period applies to a termination under 8.3/11.3; the 30-day cure in 11.1 is a separate general-breach route."
+      },
+      {
+        "case_id": "compare_competitor_remedies",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "partial",
+        "reason": "Section 8.2 and 8.1 support the Change of Control definition and deemed-assignment requiring Licensor's prior written consent, and Section 8.4 supports the 15 business day notice, but the passages say 'prior written consent' rather than 'prior express written consent' in 8.2, which is attributed to 8.1's wording, and the 8.4 notice requirement is framed as 'promptly' with 15 business days as an outer limit, which is a close but not exact match.",
+        "input_tokens": 1076,
+        "output_tokens": 170,
+        "cost_usd": 0.00019260000000000002,
+        "statement": "Meridian Change of Control (over 50% equity/voting power or sale of substantially all assets) is deemed an assignment requiring Licensor's prior express written consent; Licensee must notify at least 15 business days before closing."
+      },
+      {
+        "case_id": "compare_competitor_remedies",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "supported",
+        "reason": "Section 9.1 requires prior written consent not to be unreasonably withheld for assignment including in connection with a change of control, and states that any purported assignment in violation is null and void.",
+        "input_tokens": 806,
+        "output_tokens": 73,
+        "cost_usd": 0.00011710000000000001,
+        "statement": "TerraNode requires prior written consent (not unreasonably withheld) for assignment including by change of control; a non-consented assignment is null and void."
+      },
+      {
+        "case_id": "compare_competitor_remedies",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "partial",
+        "reason": "Section 9.2 supports that consent may be withheld on a reasonable basis when the acquirer or its affiliates is a Direct Competitor, but the passages do not expressly state that it is not a termination right, so that part of the claim is unsupported.",
+        "input_tokens": 1370,
+        "output_tokens": 96,
+        "cost_usd": 0.000185,
+        "statement": "TerraNode's competitor provision is a right to withhold consent on a reasonable basis if the acquirer or its affiliates is a Direct Competitor, not a termination right."
+      },
+      {
+        "case_id": "compare_competitor_remedies",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "partial",
+        "reason": "The passages support 30 days' written notice, the 60-day cure period to obtain consent, and automatic effectiveness at cure-period end, but they describe the 60-day cure as running from receipt of the termination notice and do not state the claim's framing that termination is 'ineffective' if consent is obtained within 60 days of the notice; the claim's wording is substantively consistent but slightly loose, and the passages do not explicitly describe the notice as a 30-day period leading to automatic effectiveness in the claimed manner beyond what is stated.",
+        "input_tokens": 1142,
+        "output_tokens": 190,
+        "cost_usd": 0.0002092,
+        "statement": "TerraNode termination for assignment in violation of Article 9 requires 30 days' written notice, and is ineffective if consent is obtained within 60 days of the notice; otherwise it becomes effective automatically at the end of the cure period."
+      },
+      {
+        "case_id": "compare_competitor_remedies",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "partial",
+        "reason": "Section 9.4 supports the 45-day prior notice requirement for a change of control and the 30-day response period with silence not deemed consent, but it applies these to each Party (mutual) and to any transaction constituting an assignment, and it does not single out TerraNode as the party requiring notice, so the attribution is imprecise.",
+        "input_tokens": 847,
+        "output_tokens": 120,
+        "cost_usd": 0.0001447,
+        "statement": "TerraNode requires 45 days' prior notice of a proposed change of control; Provider has 30 days to respond and silence is not consent."
+      },
+      {
+        "case_id": "compare_competitor_remedies",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "numeric": {
+          "missing_numbers": [],
+          "missing_section_refs": [],
+          "flagged": false
+        },
+        "verdict": "supported",
+        "reason": "Section 5.3 provides termination for material breach on sixty days' written notice with failure to cure within that period, and Section 5.6(d) imposes liquidated damages (remaining monthly fees) when Customer terminates early other than for Provider's material breach under 5.3 or chronic failure under Exhibit B Section 4.",
+        "input_tokens": 1050,
+        "output_tokens": 122,
+        "cost_usd": 0.000166,
+        "statement": "TerraNode general material-breach termination requires 60 days' notice and cure; early termination by Customer outside Provider breach/chronic failure triggers liquidated damages."
+      }
+    ],
+    "off_scope_passages": [
+      {
+        "case_id": "terranode_notice_affiliate",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "question": "For TerraNode's infrastructure agreement, what consent and advance notice are needed for a change of control versus an assignment to an affiliate, and does silence mean consent?",
+        "verdict": "useful_context",
+        "reason": "The memo summarizes change of control triggers across contracts, including a one-line mention of the TerraNode ISA, but it does not state the consent, advance notice, assignment-to-affiliate rules, or silence-as-consent terms the question asks about, so it is background rather than essential evidence.",
+        "input_tokens": 1335,
+        "output_tokens": 111,
+        "cost_usd": 0.000189,
+        "source": "deal-overview-memo.docx",
+        "legal_ref": null
+      },
+      {
+        "case_id": "novabridge_silence_pricing",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "question": "Under NovaBridge's supply agreement, can silence after advance change-of-control notice remove the termination right, and what pricing changes apply if the buyer's acquirer exceeds $1 billion in revenue?",
+        "verdict": "needed",
+        "reason": "Section 11.1 directly governs whether a failure to exercise the termination right within the 120-day window (silence) waives the right after change-of-control notice, which is the core of the first part of the question; it does not address pricing changes, but the question's first half cannot be answered without it.",
+        "input_tokens": 905,
+        "output_tokens": 102,
+        "cost_usd": 0.0001415,
+        "source": "novabridge-partnership.docx",
+        "legal_ref": "11.1"
+      },
+      {
+        "case_id": "novabridge_silence_pricing",
+        "method": "claude:claude-haiku-5-5+claude-sonnet-5-5",
+        "question": "Under NovaBridge's supply agreement, can silence after advance change-of-control notice remove the termination right, and what pricing changes apply if the buyer's acquirer exceeds $1 billion in revenue?",
+        "verdict": "useful_context",
+        "reason": "The passage defines Change of Control and Affiliate, which are background terms relevant to the change-of-control question, but it contains no silence/notice termination mechanics or pricing terms tied to a $1 billion acquirer revenue threshold, so it is not essential.",
+        "input_tokens": 1308,
+        "output_tokens": 102,
+        "cost_usd": 0.0001818,
+        "source": "novabridge-partnership.docx",
+        "legal_ref": null
+      }
+    ]
+  }
+}

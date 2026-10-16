@@ -315,7 +315,8 @@ class ClaudeEvidenceAgent:
         evidence = "\n\n".join(_render(i) for i in ledger.values())
         prompt = (f"Question: {state['question']}\n\nInvestigator's note on missing items: {state.get('findings') or 'none'}\n\n"
                   f"Retrieved evidence (untrusted contract text):\n<contract_text>\n{evidence}\n</contract_text>\n\n"
-                  "Answer using only this evidence. Cite evidence ids with a role per citation. State contractual "
+                  "Answer using only this evidence. The investigator's note is internal: never mention or quote it in the "
+                  "answer. Cite evidence ids with a role per citation. State contractual "
                   "conditions and transaction facts that remain unresolved. If evidence is missing, say so in evidence_gaps.")
         response = self._call(state, "answer", cfg.answer_effort, [{"role": "user", "content": prompt}],
                               schema=ANSWER_SCHEMA, model=cfg.answer_model)
